@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/mywiki.github.io/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/mywiki.github.io/css/main.css">
+<link rel="stylesheet" href="/mywiki.github.io/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            NILMTK阅读 | vm
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/mywiki.github.io/" class="mdui-typo-headline">vm</a>
+    <a href="/mywiki.github.io/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/mywiki.github.io/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/mywiki.github.io/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-gallery"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Gallery</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="https://www.biaoqingb.com/uploads/img1/20200205/40bdfc2945fd8a7a05dc1f55e71e6592.jpg"/>
+                
+            </div>
+            <div class="sidebar-author-name">vm</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mont2018a@@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/vmpet " class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-jianshu"></i></span>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/1719f031acd3" class="mdui-chip-title">jianshu</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://weibo.com/vlnk21" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/mywiki.github.io/22628/">NILMTK阅读</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2021-05-26
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2021-05-26
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/mywiki.github.io/categories/paper/">paper</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=NILMTK阅读&url=https://github.com/vmpet/mywiki.github.io/22628/&pic=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=NILMTK阅读&url=https://github.com/vmpet/mywiki.github.io/22628/&via=vm" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/vmpet/mywiki.github.io/22628/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://github.com/vmpet/mywiki.github.io/22628/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/vmpet/mywiki.github.io/22628/&title=NILMTK阅读" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=vm&title=NILMTK阅读&summary=&pics=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&url=https://github.com/vmpet/mywiki.github.io/22628/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://github.com/vmpet/mywiki.github.io/22628/&text=NILMTK阅读" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/pdf/ >pdf</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h1 id=""><a href="#" class="headerlink" title=""></a></h1><ol>
+<li>最理想的免费在线<a target="_blank" rel="noopener" href="https://www.aconvert.com/cn/pdf/pdf-to-html/">转换</a></li>
+</ol>
+<h3 id="CO算法"><a href="#CO算法" class="headerlink" title="CO算法"></a>CO算法</h3><p>分解时候的函数是用的disaggregate_chunk，得到房间的总功率曲线，并对5种电器进行分解。</p>
+<p>将之前train()过程的质心提取出来，并做一个枚举操作，cartesian函数是做枚举操作，由5个模型，每个模型3个状态，则可得3<em>3</em>3<em>3</em>3=243行，5列的状态组合数据。</p>
+<p>对状态数据进行按列累加，然后调用find_nearest函数，求得负荷数据和状态数据的残差和具体索引值。find_nearest的传入参数有按列累加之后的状态数据，用户的总功率数据。</p>
+<h3 id="FHMM"><a href="#FHMM" class="headerlink" title="FHMM"></a>FHMM</h3><p>对每个电器的数据，进行聚类后确定每个电器的状态</p>
+<p>遍历每个电器</p>
+<p>利用GUSSAINHMM模型进行模型训练</p>
+<p>对GaussianHMM计算的means_结果进行排序，然后根据means_索引值得到相应的startprob,covars,transmat等，然后在进行一次GaussianHMM，并对参数赋值。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> datetime
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> hmmlearn<span class="token punctuation">.</span>hmm <span class="token keyword">import</span> GaussianHMM
+X_train <span class="token operator">=</span> h1_fridge<span class="token punctuation">[</span><span class="token string">'2014-06-20'</span><span class="token punctuation">:</span><span class="token string">'2014-06-22'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'meter_reading'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X_train<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+X_test <span class="token operator">=</span> h1_fridge<span class="token punctuation">[</span><span class="token string">'2014-06-23'</span><span class="token punctuation">:</span><span class="token string">'2014-06-24'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'meter_reading'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X_test<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+model <span class="token operator">=</span> GaussianHMM<span class="token punctuation">(</span>n_components<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> covariance_type<span class="token operator">=</span><span class="token string">"diag"</span><span class="token punctuation">,</span> n_iter<span class="token operator">=</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">)</span>
+
+hidden_states <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+hidden_state_means <span class="token operator">=</span> model<span class="token punctuation">.</span>means_
+
+
+ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_axis<span class="token punctuation">,</span> X_test<span class="token punctuation">[</span><span class="token punctuation">:</span>n_obs<span class="token punctuation">]</span><span class="token punctuation">)</span>
+ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_axis<span class="token punctuation">,</span> hidden_states<span class="token punctuation">[</span><span class="token punctuation">:</span>n_obs<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>hidden_states<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>transmat_<span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>对数似然值：model<span class="token punctuation">.</span>score<span class="token punctuation">(</span>x_test_6<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>n_components<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"&#123;0&#125;th hidden state"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"mean = "</span><span class="token punctuation">,</span> model<span class="token punctuation">.</span>means_<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"var = "</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>diag<span class="token punctuation">(</span>model<span class="token punctuation">.</span>covars_<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    
+
+<span class="token keyword">def</span> <span class="token function">HMM_accuracy</span><span class="token punctuation">(</span>obs_levels<span class="token punctuation">,</span>hidden_states<span class="token punctuation">,</span>state_means<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    predict_levels <span class="token operator">=</span> <span class="token punctuation">[</span>state_means<span class="token punctuation">[</span>state<span class="token punctuation">]</span> <span class="token keyword">for</span> state <span class="token keyword">in</span> hidden_states<span class="token punctuation">]</span>
+    test_error <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> <span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>obs_levels<span class="token punctuation">)</span> <span class="token operator">-</span> np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>predict_levels<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>obs_levels<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> test_error
+
+state_means <span class="token operator">=</span> state_means<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>HMM_accuracy<span class="token punctuation">(</span>X_test<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>hidden_states_test<span class="token punctuation">,</span>state_means<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+<pre class="line-numbers language-none"><code class="language-none">states &#x3D; cluster(meter_data, max_num_clusters&#x3D;3)
+num_total_states &#x3D; len(states)
+learnt_model[appliance] &#x3D; hmm.GaussianHMM(num_total_states, &quot;full&quot;)
+learnt_model[appliance].fit(X)
+
+startprob, means, covars, transmat &#x3D; sort_learnt_parameters(
+                learnt_model[meter].startprob_, learnt_model[meter].means_,
+                learnt_model[meter].covars_, learnt_model[meter].transmat_)
+                
+ new_learnt_models[meter] &#x3D; hmm.GaussianHMM(startprob.size, &quot;full&quot;)
+            new_learnt_models[meter].startprob_ &#x3D; startprob
+            new_learnt_models[meter].transmat_ &#x3D; transmat
+            new_learnt_models[meter].means_ &#x3D; means
+            new_learnt_models[meter].covars_ &#x3D; covars
+            
+ learnt_model_combined &#x3D; create_combined_hmm(new_learnt_models)
+        self.individual &#x3D; new_learnt_models
+        self.model &#x3D; learnt_model_combined
+
+ for elec_meter, model in self.individual.items():
+     means[elec_meter] &#x3D; (model.means_.round().astype(int).flatten().tolist())
+     means[elec_meter].sort()
+                    
+                    
+[decoded_states, decoded_power] &#x3D; decode_hmm(
+    len(learnt_states), means, means.keys(), learnt_states)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+<p>从文件siteonlyapi_tutorial.ipynb中发现：</p>
+<pre class="line-numbers language-none"><code class="language-none">from nilmtk.api import API
+api_results_experiment_1 &#x3D; API(experiment1)
+df &#x3D; (api_results_experiment_1.pred_overall[&#39;CO&#39;])
+df<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2021/05/25/nrORzw1ycuk2bvZ.png" alt="image-20210525161820817"></p>
+<p>然后查找api.py文件，搜索关键词“pred_overall”,发现：</p>
+<p><img src="https://i.loli.net/2021/05/25/EQg3Hs4v7xZAMKe.png" alt="image-20210525162128147"></p>
+<p>找到concat_pred_df是由pred_list转化而来，而pred_list：</p>
+<pre class="line-numbers language-none"><code class="language-none">pred_list &#x3D; clf.disaggregate_chunk(test_elec)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>因此接着查询disaggregate_chunk：返回到文件fhmm_exact.py中存在这个函数</p>
+<p>pred_list主要是由decode_hmm这个函数来计算的：</p>
+<pre class="line-numbers language-none"><code class="language-none">[decoded_states, decoded_power] &#x3D; decode_hmm(
+    len(learnt_states), means, means.keys(), learnt_states)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>其中的means是由self.individual这个参数传到的</p>
+<pre class="line-numbers language-none"><code class="language-none">means&#x3D;model.means_------- from self.individual-----&gt;self.individual &#x3D; new_learnt_models<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">learnt_states <span class="token keyword">in</span> learnt_states_array
+learnt_states_array<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">)</span>
+temp <span class="token operator">=</span> test_mains<span class="token punctuation">.</span>values<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>length<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+test_mains <span class="token keyword">in</span> test_mains_list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">def disaggregate_chunk(self, test_mains_list)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+
+
+<p>最后再温习一下<a href="https://github.com/pipette/Electricity-load-disaggregation/blob/master/code/run_model.py">here</a><br>and <a target="_blank" rel="noopener" href="https://notebook.community/diegocavalca/Studies/phd-thesis/benchmarkings/am207-NILM-project-master/fhmm">here</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wwb1990/article/details/103905371">安装教程</a></p>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/mywiki.github.io/20256/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>公司报销流程</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/mywiki.github.io/29897/">
+        <span>食谱</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/mywiki.github.io/22628/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CO%E7%AE%97%E6%B3%95"><span class="toc-number">1.0.1.</span> <span class="toc-text">CO算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FHMM"><span class="toc-number">1.0.2.</span> <span class="toc-text">FHMM</span></a></li></ol></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        vm
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/mywiki.github.io/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/mywiki.github.io/js/meadow.js"></script>
+
+</body>
+</html >

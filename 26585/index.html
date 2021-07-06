@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/mywiki.github.io/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/mywiki.github.io/css/main.css">
+<link rel="stylesheet" href="/mywiki.github.io/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            hmm模型 | vm
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/mywiki.github.io/" class="mdui-typo-headline">vm</a>
+    <a href="/mywiki.github.io/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/mywiki.github.io/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/mywiki.github.io/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-gallery"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Gallery</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="https://www.biaoqingb.com/uploads/img1/20200205/40bdfc2945fd8a7a05dc1f55e71e6592.jpg"/>
+                
+            </div>
+            <div class="sidebar-author-name">vm</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mont2018a@@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/vmpet " class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-jianshu"></i></span>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/1719f031acd3" class="mdui-chip-title">jianshu</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://weibo.com/vlnk21" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/mywiki.github.io/26585/">hmm模型</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2021-06-01
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2021-06-01
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/mywiki.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=hmm模型&url=https://github.com/vmpet/mywiki.github.io/26585/&pic=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=hmm模型&url=https://github.com/vmpet/mywiki.github.io/26585/&via=vm" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/vmpet/mywiki.github.io/26585/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://github.com/vmpet/mywiki.github.io/26585/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/vmpet/mywiki.github.io/26585/&title=hmm模型" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=vm&title=hmm模型&summary=&pics=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&url=https://github.com/vmpet/mywiki.github.io/26585/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://github.com/vmpet/mywiki.github.io/26585/&text=hmm模型" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/tech/ >tech</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/hmm/ >hmm</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>from <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c80ca0aa4213">here</a></p>
+<p>介绍的非常清楚！</p>
+<p>下面介绍一下具体使用方法：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">## 安装方式 http://baostock.com/baostock/index.php/%E9%A6%96%E9%A1%B5</span>
+<span class="token keyword">import</span> baostock <span class="token keyword">as</span> bs
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">import</span> datetime
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> cm<span class="token punctuation">,</span> pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> hmmlearn<span class="token punctuation">.</span>hmm <span class="token keyword">import</span> GaussianHMM
+
+
+<span class="token comment">#### 登陆系统 ####</span>
+lg <span class="token operator">=</span> bs<span class="token punctuation">.</span>login<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 显示登陆返回信息</span>
+<span class="token comment"># print('login respond error_code:'+lg.error_code)</span>
+<span class="token comment"># print('login respond  error_msg:'+lg.error_msg)</span>
+
+<span class="token comment">#### 获取沪深A股历史K线数据 ####</span>
+<span class="token comment"># 详细指标参数，参见“历史行情指标参数”章节；“分钟线”参数与“日线”参数不同。“分钟线”不包含指数。</span>
+<span class="token comment"># 分钟线指标：date,time,code,open,high,low,close,volume,amount,adjustflag</span>
+<span class="token comment"># 周月线指标：date,code,open,high,low,close,volume,amount,adjustflag,turn,pctChg</span>
+rs <span class="token operator">=</span> bs<span class="token punctuation">.</span>query_history_k_data_plus<span class="token punctuation">(</span><span class="token string">"sh.601668"</span><span class="token punctuation">,</span>
+    <span class="token string">"date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,pctChg,isST"</span><span class="token punctuation">,</span>
+    start_date<span class="token operator">=</span><span class="token string">'2015-05-01'</span><span class="token punctuation">,</span> end_date<span class="token operator">=</span><span class="token string">'2021-5-31'</span><span class="token punctuation">,</span>
+    frequency<span class="token operator">=</span><span class="token string">"d"</span><span class="token punctuation">,</span> adjustflag<span class="token operator">=</span><span class="token string">"3"</span><span class="token punctuation">)</span>
+<span class="token comment"># print('query_history_k_data_plus respond error_code:'+rs.error_code)</span>
+<span class="token comment"># print('query_history_k_data_plus respond  error_msg:'+rs.error_msg)</span>
+
+<span class="token comment">#### 打印结果集 ####</span>
+data_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>rs<span class="token punctuation">.</span>error_code <span class="token operator">==</span> <span class="token string">'0'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> rs<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 获取一条记录，将记录合并在一起</span>
+    data_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>rs<span class="token punctuation">.</span>get_row_data<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+result <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data_list<span class="token punctuation">,</span> columns<span class="token operator">=</span>rs<span class="token punctuation">.</span>fields<span class="token punctuation">)</span>
+
+<span class="token comment">#### 结果集输出到csv文件 ####</span>
+<span class="token comment"># result.to_csv("D:\\history_A_stock_k_data.csv", index=False)</span>
+<span class="token comment"># print(result)</span>
+
+<span class="token comment">#### 登出系统 ####</span>
+bs<span class="token punctuation">.</span>logout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">del</span><span class="token punctuation">(</span>data_list<span class="token punctuation">,</span>lg<span class="token punctuation">,</span>rs<span class="token punctuation">)</span>
+
+
+<span class="token comment">#数据处理</span>
+<span class="token comment"># df = pd.read_excel("601668.SH.xlsx", header=0)</span>
+df<span class="token operator">=</span>result
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"原始数据的大小："</span><span class="token punctuation">,</span> df<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"原始数据的列名"</span><span class="token punctuation">,</span> df<span class="token punctuation">.</span>columns<span class="token punctuation">)</span>
+df<span class="token punctuation">[</span><span class="token string">'date'</span><span class="token punctuation">]</span> <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'date'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> drop<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span class="token comment">#df.head</span>
+df<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'code'</span><span class="token punctuation">,</span><span class="token string">'index'</span><span class="token punctuation">,</span><span class="token string">'open'</span><span class="token punctuation">,</span><span class="token string">'high'</span><span class="token punctuation">,</span><span class="token string">'low'</span> <span class="token punctuation">,</span><span class="token string">'preclose'</span><span class="token punctuation">,</span> <span class="token string">'amount'</span><span class="token punctuation">,</span> <span class="token string">'adjustflag'</span><span class="token punctuation">,</span><span class="token string">'turn'</span><span class="token punctuation">,</span><span class="token string">'tradestatus'</span><span class="token punctuation">,</span><span class="token string">'pctChg'</span><span class="token punctuation">,</span><span class="token string">'isST'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment">#df['date'] = df['date'].apply(datetime.datetime.toordinal)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+dates <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'date'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+close_v <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'close'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token builtin">float</span><span class="token punctuation">)</span>
+volume <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'volume'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token builtin">float</span><span class="token punctuation">)</span>
+diff <span class="token operator">=</span> np<span class="token punctuation">.</span>diff<span class="token punctuation">(</span>close_v<span class="token punctuation">)</span>
+<span class="token comment">#获得输入数据</span>
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>column_stack<span class="token punctuation">(</span><span class="token punctuation">[</span>diff<span class="token punctuation">,</span> volume<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">#print("输入数据的大小：", X.shape)   #(1504, 2)</span>
+<span class="token comment"># float(d, base=10)</span>
+
+<span class="token builtin">min</span> <span class="token operator">=</span> X<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">8</span><span class="token operator">*</span>X<span class="token punctuation">.</span>std<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>   <span class="token comment">#最小值</span>
+<span class="token builtin">max</span> <span class="token operator">=</span> X<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">8</span><span class="token operator">*</span>X<span class="token punctuation">.</span>std<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment">#最大值</span>
+X <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+<span class="token comment">#异常值设为均值</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">#dataframe的遍历</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>X<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">&lt;</span> <span class="token builtin">min</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>X<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">></span> <span class="token builtin">max</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            X<span class="token punctuation">.</span>loc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> X<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token comment">#数据集的划分</span>
+X_Test <span class="token operator">=</span> X<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">]</span>
+X_Pre <span class="token operator">=</span> X<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"训练集的大小："</span><span class="token punctuation">,</span> X_Test<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>     <span class="token comment">#(1474, 2)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"测试集的大小："</span><span class="token punctuation">,</span> X_Pre<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>      <span class="token comment">#(30, 2)</span>
+<span class="token comment">#模型的搭建</span>
+<span class="token comment">#model = GaussianHMM(n_components=3, covariance_type='diag', n_iter=1000)</span>
+<span class="token comment"># print("隐藏状态的个数", model.n_components)  #</span>
+<span class="token comment"># print("均值矩阵")</span>
+<span class="token comment"># print(model.means_)</span>
+<span class="token comment"># print("协方差矩阵")</span>
+<span class="token comment"># print(model.covars_)</span>
+<span class="token comment"># print("状态转移矩阵--A")</span>
+<span class="token comment"># print(model.transmat_)</span>
+
+<span class="token comment">## 给定隐特征的数目</span>
+n <span class="token operator">=</span> <span class="token number">3</span>
+model <span class="token operator">=</span> GaussianHMM<span class="token punctuation">(</span>n_components<span class="token operator">=</span>n<span class="token punctuation">,</span> covariance_type<span class="token operator">=</span><span class="token string">'full'</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_Test<span class="token punctuation">)</span>
+y <span class="token operator">=</span> model<span class="token punctuation">.</span>predict_proba<span class="token punctuation">(</span>X_Test<span class="token punctuation">)</span> <span class="token comment"># 获取预测的概率</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_Test<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 获取预测状态值</span>
+<span class="token comment">#训练数据的隐藏状态划分</span>
+hidden_states <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_Test<span class="token punctuation">)</span>
+
+
+X_pic <span class="token operator">=</span> np<span class="token punctuation">.</span>column_stack<span class="token punctuation">(</span><span class="token punctuation">(</span>dates<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>toordinal<span class="token punctuation">)</span><span class="token punctuation">,</span> hidden_states<span class="token punctuation">,</span> X_Test<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X_Test<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># 观测值</span>
+X_pic<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>X_pic<span class="token punctuation">)</span>
+X_pic<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>dates<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+X_pic<span class="token punctuation">.</span>columns <span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'date'</span><span class="token punctuation">,</span> <span class="token string">'hidden_states'</span><span class="token punctuation">,</span> <span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token string">'vol'</span><span class="token punctuation">]</span>
+
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X_pic<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>plot_date<span class="token punctuation">(</span>x<span class="token operator">=</span>X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token operator">=</span>X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>plot_date<span class="token punctuation">(</span>x<span class="token operator">=</span>X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token operator">=</span>X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'purple'</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>plot_date<span class="token punctuation">(</span>x<span class="token operator">=</span>X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token operator">=</span>X_pic<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'y'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+X_Test2<span class="token punctuation">,</span> hidden_states <span class="token operator">=</span> model<span class="token punctuation">.</span>sample<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X_Test<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># status = ['s1', 's2', 's3']</span>
+<span class="token comment"># obs = ['设备1', '设备2','设备3']</span>
+<span class="token comment">#</span>
+<span class="token comment"># state2 = np.array([[0, 1, 0, 2, 1,1,2,2,2,0,0,1]]).T</span>
+<span class="token comment"># logprob, sta_index = model.decode(state2, algorithm='viterbi')</span>
+<span class="token comment">#</span>
+<span class="token comment"># print("设备:", end="")</span>
+<span class="token comment"># print(" ".join(map(lambda t: obs[t], [0, 1, 0, 2, 1,1,2,2,2,0,0,1])))</span>
+<span class="token comment"># print("状态:", end="")</span>
+<span class="token comment"># print(" ".join(map(lambda t: status[t], sta_index)))</span>
+<span class="token comment"># print("概率值:", end="")</span>
+<span class="token comment"># print(np.exp(logprob)) # 这个是因为在hmmlearn底层将概率进行了对数化，防止出现乘积为0的情况</span>
+
+
+<span class="token comment">#print("协方差矩阵")</span>
+<span class="token keyword">import</span> matplotlib <span class="token keyword">as</span> mpl
+
+t <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>diff<span class="token punctuation">)</span><span class="token punctuation">)</span>
+mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">u'SimHei'</span><span class="token punctuation">]</span>
+mpl<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">,</span> facecolor<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">231</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>t<span class="token punctuation">,</span> diff<span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">u'涨跌幅'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">232</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>t<span class="token punctuation">,</span> volume<span class="token punctuation">,</span> <span class="token string">'g-'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">u'交易量'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 产生一个颜色</span>
+clrs <span class="token operator">=</span> plt<span class="token punctuation">.</span>cm<span class="token punctuation">.</span>terrain<span class="token punctuation">(</span>np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.8</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> clr <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>clrs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 画到一张图中</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>t<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">,</span> color<span class="token operator">=</span>clr<span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.7</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">u'所有状态组'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 分开画</span>
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> clr <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>clrs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>t<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'-'</span><span class="token punctuation">,</span> color<span class="token operator">=</span>clr<span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">u'状态组%d'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>suptitle<span class="token punctuation">(</span><span class="token string">u'SH601668股票：GaussianHMM分解隐变量'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>tight_layout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>subplots_adjust<span class="token punctuation">(</span>top<span class="token operator">=</span><span class="token number">0.9</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/mywiki.github.io/55978/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>FHMM模型数据接口尝试修改</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/mywiki.github.io/30907/">
+        <span>碳排放</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/mywiki.github.io/26585/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        
+      </li>
+    </ul>
+  </div>
+
+
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        vm
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/mywiki.github.io/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/mywiki.github.io/js/meadow.js"></script>
+
+</body>
+</html >

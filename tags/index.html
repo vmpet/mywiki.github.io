@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/mywiki.github.io/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/mywiki.github.io/css/main.css">
+<link rel="stylesheet" href="/mywiki.github.io/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            tags | vm
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/mywiki.github.io/" class="mdui-typo-headline">vm</a>
+    <a href="/mywiki.github.io/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/mywiki.github.io/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/mywiki.github.io/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-gallery"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Gallery</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="https://www.biaoqingb.com/uploads/img1/20200205/40bdfc2945fd8a7a05dc1f55e71e6592.jpg"/>
+                
+            </div>
+            <div class="sidebar-author-name">vm</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mont2018a@@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/vmpet " class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-jianshu"></i></span>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/1719f031acd3" class="mdui-chip-title">jianshu</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://weibo.com/vlnk21" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <div class="mdui-card mdui-p-b-2 mdui-m-b-5">
+    <div class="post-header"> 
+        <a class="post-header-title" href="/mywiki.github.io/tags/index.html">Tags</a>
+    </div>
+    <div id="page-card" class="mdui-card-content mdui-p-x-4">
+        
+            <div class="page-describe">
+    31 tags in total
+</div>
+<div class="tags-contain">
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">5</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/tech/">tech</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">3</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/hmm/">hmm</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">2</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/pdf/">pdf</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/html/">html</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">2</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">2</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/NILM/">NILM</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/hexo/">hexo</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/kaggle/">kaggle</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E8%87%AA%E7%84%B6%E6%A2%AF%E5%BA%A6/">自然梯度</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/KL-%E6%95%A3%E5%BA%A6/">KL-散度</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/FHMM%E7%AE%97%E6%B3%95/">FHMM算法</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E8%87%AA%E5%8A%A8%E8%81%9A%E7%B1%BB/">自动聚类</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/tool/">tool</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/office/">office</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E6%8A%A5%E9%94%80/">报销</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/ebook/">ebook</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/tensorflow/">tensorflow</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/CentOS/">CentOS</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/python/">python</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E6%AC%A7%E6%B4%B2/">欧洲</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E7%A2%B3%E5%B8%82%E5%9C%BA/">碳市场</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E8%83%BD%E9%87%8F%E5%88%86%E8%A7%A3/">能量分解</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">无监督学习</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E5%8D%95%E9%80%9A%E9%81%93%E6%BA%90%E5%88%86%E7%A6%BB/">单通道源分离</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E8%B1%86%E8%85%90%E8%84%91/">豆腐脑</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E8%AE%A4%E7%9F%A5%E5%A4%B1%E8%B0%83/">认知失调</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E6%83%85%E7%BB%AA/">情绪</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/%E5%A4%A7%E8%84%91/">大脑</a>
+        </div>
+    
+        <div class="mdui-chip tags-chip">
+            
+                <span class="mdui-chip-icon">1</span>
+            
+            <a class="mdui-chip-title" href="/mywiki.github.io/tags/HMM/">HMM</a>
+        </div>
+    
+</div>
+
+        </div>
+        
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        vm
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+    
+<script src="/mywiki.github.io/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/mywiki.github.io/js/meadow.js"></script>
+
+</body>
+</html >

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/mywiki.github.io/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/mywiki.github.io/css/main.css">
+<link rel="stylesheet" href="/mywiki.github.io/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            nilm_AFHMM算法代码改造 | vm
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/mywiki.github.io/" class="mdui-typo-headline">vm</a>
+    <a href="/mywiki.github.io/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/mywiki.github.io/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/mywiki.github.io/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-gallery"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Gallery</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="https://www.biaoqingb.com/uploads/img1/20200205/40bdfc2945fd8a7a05dc1f55e71e6592.jpg"/>
+                
+            </div>
+            <div class="sidebar-author-name">vm</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mont2018a@@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/vmpet " class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-jianshu"></i></span>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/1719f031acd3" class="mdui-chip-title">jianshu</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://weibo.com/vlnk21" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/mywiki.github.io/46953/">nilm_AFHMM算法代码改造</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2021-06-04
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2021-06-04
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/mywiki.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=nilm_AFHMM算法代码改造&url=https://github.com/vmpet/mywiki.github.io/46953/&pic=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=nilm_AFHMM算法代码改造&url=https://github.com/vmpet/mywiki.github.io/46953/&via=vm" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/vmpet/mywiki.github.io/46953/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://github.com/vmpet/mywiki.github.io/46953/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/vmpet/mywiki.github.io/46953/&title=nilm_AFHMM算法代码改造" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=vm&title=nilm_AFHMM算法代码改造&summary=&pics=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&url=https://github.com/vmpet/mywiki.github.io/46953/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://github.com/vmpet/mywiki.github.io/46953/&text=nilm_AFHMM算法代码改造" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/tech/ >tech</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/hmm/ >hmm</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/FHMM%E7%AE%97%E6%B3%95/ >FHMM算法</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/%E8%87%AA%E5%8A%A8%E8%81%9A%E7%B1%BB/ >自动聚类</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
+<li>FHMM模型占用内存空间太大，因此这里选取了4个潜在目标设备进行分解，后续需要优化如何选择潜在目标 设备</li>
+<li>FHMM模型的训练数据集的预测时间窗口不能太长，超过3000个样本点就容易出问题</li>
+<li>各个设备的状态数目需要优化策略，最好按照设备电机类型等物理属性进行预分类</li>
+</ol>
+<h3 id="下面是详细代码"><a href="#下面是详细代码" class="headerlink" title="下面是详细代码"></a>下面是详细代码</h3><p>数据集是基于REDD数据集中的低频数据进行实现的，选择单个用户的居住地进行NILM分解。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> itertools
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token comment">#import datetime</span>
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> hmmlearn <span class="token keyword">import</span> hmm
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> OrderedDict
+<span class="token keyword">import</span> os
+
+<span class="token comment"># path = "E:/ccc/data/pythonProject/venv/nilm_data_house6/"</span>
+path <span class="token operator">=</span> <span class="token string">"./nilm_data_house6/"</span>
+tz <span class="token operator">=</span> <span class="token string">'US/Eastern'</span>
+
+
+<span class="token keyword">def</span> <span class="token function">_load_csv</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> columns<span class="token punctuation">,</span> tz<span class="token punctuation">,</span> drop_duplicates<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> sort_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Load data</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">,</span> names<span class="token operator">=</span>columns<span class="token punctuation">,</span>
+                     dtype<span class="token operator">=</span><span class="token punctuation">&#123;</span>m<span class="token punctuation">:</span> np<span class="token punctuation">.</span>float32 <span class="token keyword">for</span> m <span class="token keyword">in</span> columns<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+    <span class="token comment"># Convert the integer index column to timezone-aware datetime</span>
+    df<span class="token punctuation">.</span>index <span class="token operator">=</span> pd<span class="token punctuation">.</span>to_datetime<span class="token punctuation">(</span>df<span class="token punctuation">.</span>index<span class="token punctuation">.</span>values<span class="token punctuation">,</span> unit<span class="token operator">=</span><span class="token string">'s'</span><span class="token punctuation">,</span> utc<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    df <span class="token operator">=</span> df<span class="token punctuation">.</span>tz_convert<span class="token punctuation">(</span>tz<span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> sort_index<span class="token punctuation">:</span>
+        df <span class="token operator">=</span> df<span class="token punctuation">.</span>sort_index<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># raw REDD data isn't always sorted</span>
+
+    <span class="token keyword">if</span> drop_duplicates<span class="token punctuation">:</span>
+        dups_in_index <span class="token operator">=</span> df<span class="token punctuation">.</span>index<span class="token punctuation">.</span>duplicated<span class="token punctuation">(</span>keep<span class="token operator">=</span><span class="token string">'first'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> dups_in_index<span class="token punctuation">.</span><span class="token builtin">any</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            df <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token operator">~</span>dups_in_index<span class="token punctuation">]</span>
+
+    <span class="token keyword">return</span> df
+
+
+<span class="token keyword">def</span> <span class="token function">load_dat</span><span class="token punctuation">(</span>key_obj<span class="token punctuation">,</span> column<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    filename <span class="token operator">=</span> <span class="token string">'channel_&#123;:d&#125;.dat'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>key_obj<span class="token punctuation">)</span>
+    filename <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>path<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+    hg <span class="token operator">=</span> _load_csv<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> column<span class="token punctuation">,</span> tz<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> hg
+
+
+<span class="token keyword">def</span> <span class="token function">_transform_data</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    MAX_NUMBER_OF_SAMPLES <span class="token operator">=</span> <span class="token number">2000</span>
+    MIN_NUMBER_OF_SAMPLES <span class="token operator">=</span> <span class="token number">20</span>
+    DATA_THRESHOLD <span class="token operator">=</span> <span class="token number">10</span>
+
+    data_above_thresh <span class="token operator">=</span> data<span class="token punctuation">[</span>data <span class="token operator">></span> DATA_THRESHOLD<span class="token punctuation">]</span><span class="token punctuation">.</span>dropna<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>values
+    n_samples <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data_above_thresh<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> n_samples <span class="token operator">&lt;</span> MIN_NUMBER_OF_SAMPLES<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>MAX_NUMBER_OF_SAMPLES<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> n_samples <span class="token operator">></span> MAX_NUMBER_OF_SAMPLES<span class="token punctuation">:</span>
+        <span class="token comment"># Randomly subsample (we don't want to smoothly downsample</span>
+        <span class="token comment"># because that is likely to change the values)</span>
+        random_indices <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n_samples<span class="token punctuation">,</span> MAX_NUMBER_OF_SAMPLES<span class="token punctuation">)</span>
+        resampled <span class="token operator">=</span> data_above_thresh<span class="token punctuation">[</span>random_indices<span class="token punctuation">]</span>
+        <span class="token keyword">return</span> resampled<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>MAX_NUMBER_OF_SAMPLES<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> data_above_thresh<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>n_samples<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">_apply_clustering_n_clusters</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span> n_clusters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
+    k_means <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>init<span class="token operator">=</span><span class="token string">'k-means++'</span><span class="token punctuation">,</span> n_clusters<span class="token operator">=</span>n_clusters<span class="token punctuation">)</span>
+    k_means<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> k_means<span class="token punctuation">.</span>labels_<span class="token punctuation">,</span> k_means<span class="token punctuation">.</span>cluster_centers_
+
+
+<span class="token keyword">def</span> <span class="token function">_apply_clustering</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span> max_num_clusters<span class="token punctuation">,</span> exact_num_clusters<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> sklearn <span class="token keyword">import</span> metrics
+
+    <span class="token comment"># Finds whether 2 or 3 gives better Silhouellete coefficient</span>
+    <span class="token comment"># Whichever is higher serves as the number of clusters for that</span>
+    <span class="token comment"># appliance</span>
+    num_clus <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+    sh <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>
+    k_means_labels <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    k_means_cluster_centers <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    k_means_labels_unique <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+    <span class="token comment"># If the exact number of clusters are specified, then use that</span>
+    <span class="token keyword">if</span> exact_num_clusters <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        labels<span class="token punctuation">,</span> centers <span class="token operator">=</span> _apply_clustering_n_clusters<span class="token punctuation">(</span>X<span class="token punctuation">,</span> exact_num_clusters<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> centers<span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Exact number of clusters are not specified, use the cluster validity measures</span>
+    <span class="token comment"># to find the optimal number</span>
+    <span class="token keyword">for</span> n_clusters <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> max_num_clusters<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            labels<span class="token punctuation">,</span> centers <span class="token operator">=</span> _apply_clustering_n_clusters<span class="token punctuation">(</span>X<span class="token punctuation">,</span> n_clusters<span class="token punctuation">)</span>
+            k_means_labels<span class="token punctuation">[</span>n_clusters<span class="token punctuation">]</span> <span class="token operator">=</span> labels
+            k_means_cluster_centers<span class="token punctuation">[</span>n_clusters<span class="token punctuation">]</span> <span class="token operator">=</span> centers
+            k_means_labels_unique<span class="token punctuation">[</span>n_clusters<span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>labels<span class="token punctuation">)</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                sh_n <span class="token operator">=</span> metrics<span class="token punctuation">.</span>silhouette_score<span class="token punctuation">(</span>
+                    X<span class="token punctuation">,</span> k_means_labels<span class="token punctuation">[</span>n_clusters<span class="token punctuation">]</span><span class="token punctuation">,</span> metric<span class="token operator">=</span><span class="token string">'euclidean'</span><span class="token punctuation">)</span>
+
+                <span class="token keyword">if</span> sh_n <span class="token operator">></span> sh<span class="token punctuation">:</span>
+                    sh <span class="token operator">=</span> sh_n
+                    num_clus <span class="token operator">=</span> n_clusters
+            <span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+                num_clus <span class="token operator">=</span> n_clusters
+        <span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> num_clus <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> k_means_cluster_centers<span class="token punctuation">[</span>num_clus<span class="token punctuation">]</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> k_means_cluster_centers<span class="token punctuation">[</span>num_clus<span class="token punctuation">]</span><span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">cluster</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span> max_num_clusters<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> exact_num_clusters<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Find where power consumption is greater than 10</span>
+    data <span class="token operator">=</span> _transform_data<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+    <span class="token comment"># Find clusters</span>
+    centroids <span class="token operator">=</span> _apply_clustering<span class="token punctuation">(</span>data<span class="token punctuation">,</span> max_num_clusters<span class="token punctuation">,</span> exact_num_clusters<span class="token punctuation">)</span>
+    centroids <span class="token operator">=</span> np<span class="token punctuation">.</span>append<span class="token punctuation">(</span>centroids<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment"># add 'off' state</span>
+    centroids <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">round</span><span class="token punctuation">(</span>centroids<span class="token punctuation">)</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>int32<span class="token punctuation">)</span>
+    centroids <span class="token operator">=</span> np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>centroids<span class="token punctuation">)</span>  <span class="token comment"># np.unique also sorts</span>
+    <span class="token comment"># TODO: Merge similar clusters</span>
+    <span class="token keyword">return</span> centroids
+
+
+<span class="token keyword">def</span> <span class="token function">sort_startprob</span><span class="token punctuation">(</span>mapping<span class="token punctuation">,</span> startprob<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">""" Sort the startprob according to power means; as returned by mapping
+    """</span>
+    num_elements <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>startprob<span class="token punctuation">)</span>
+    new_startprob <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>num_elements<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>startprob<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        new_startprob<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> startprob<span class="token punctuation">[</span>mapping<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> new_startprob
+
+
+<span class="token keyword">def</span> <span class="token function">sort_covars</span><span class="token punctuation">(</span>mapping<span class="token punctuation">,</span> covars<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    new_covars <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros_like<span class="token punctuation">(</span>covars<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>covars<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        new_covars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> covars<span class="token punctuation">[</span>mapping<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> new_covars
+
+
+<span class="token keyword">def</span> <span class="token function">sort_transition_matrix</span><span class="token punctuation">(</span>mapping<span class="token punctuation">,</span> A<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num_elements <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+    A_new <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>num_elements<span class="token punctuation">,</span> num_elements<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_elements<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_elements<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            A_new<span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>mapping<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> mapping<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> A_new
+
+
+<span class="token keyword">def</span> <span class="token function">sort_learnt_parameters</span><span class="token punctuation">(</span>startprob<span class="token punctuation">,</span> means<span class="token punctuation">,</span> covars<span class="token punctuation">,</span> transmat<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    mapping <span class="token operator">=</span> return_sorting_mapping<span class="token punctuation">(</span>means<span class="token punctuation">)</span>
+    means_new <span class="token operator">=</span> np<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>means<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+    startprob_new <span class="token operator">=</span> sort_startprob<span class="token punctuation">(</span>mapping<span class="token punctuation">,</span> startprob<span class="token punctuation">)</span>
+    covars_new <span class="token operator">=</span> sort_covars<span class="token punctuation">(</span>mapping<span class="token punctuation">,</span> covars<span class="token punctuation">)</span>
+    transmat_new <span class="token operator">=</span> sort_transition_matrix<span class="token punctuation">(</span>mapping<span class="token punctuation">,</span> transmat<span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>means_new<span class="token punctuation">)</span> <span class="token operator">==</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>means<span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>startprob_new<span class="token punctuation">)</span> <span class="token operator">==</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>startprob<span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>transmat_new<span class="token punctuation">)</span> <span class="token operator">==</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>transmat<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>startprob_new<span class="token punctuation">,</span> means_new<span class="token punctuation">,</span> covars_new<span class="token punctuation">,</span> transmat_new<span class="token punctuation">]</span>
+
+
+<span class="token keyword">def</span> <span class="token function">compute_A_fhmm</span><span class="token punctuation">(</span>list_A<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> list_A<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_A<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        result <span class="token operator">=</span> np<span class="token punctuation">.</span>kron<span class="token punctuation">(</span>result<span class="token punctuation">,</span> list_A<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+
+
+<span class="token keyword">def</span> <span class="token function">compute_means_fhmm</span><span class="token punctuation">(</span>list_means<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    states_combination <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>itertools<span class="token punctuation">.</span>product<span class="token punctuation">(</span><span class="token operator">*</span>list_means<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    num_combinations <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>states_combination<span class="token punctuation">)</span>
+    means_stacked <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token builtin">sum</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> states_combination<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    means <span class="token operator">=</span> np<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>means_stacked<span class="token punctuation">,</span> <span class="token punctuation">(</span>num_combinations<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    cov <span class="token operator">=</span> np<span class="token punctuation">.</span>tile<span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>identity<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>num_combinations<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>means<span class="token punctuation">,</span> cov<span class="token punctuation">]</span>
+
+
+<span class="token keyword">def</span> <span class="token function">compute_pi_fhmm</span><span class="token punctuation">(</span>list_pi<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> list_pi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list_pi<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        result <span class="token operator">=</span> np<span class="token punctuation">.</span>kron<span class="token punctuation">(</span>result<span class="token punctuation">,</span> list_pi<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+
+
+<span class="token keyword">def</span> <span class="token function">create_combined_hmm</span><span class="token punctuation">(</span>model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    list_pi <span class="token operator">=</span> <span class="token punctuation">[</span>model<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">.</span>startprob_ <span class="token keyword">for</span> appliance <span class="token keyword">in</span> model<span class="token punctuation">]</span>
+    list_A <span class="token operator">=</span> <span class="token punctuation">[</span>model<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">.</span>transmat_ <span class="token keyword">for</span> appliance <span class="token keyword">in</span> model<span class="token punctuation">]</span>
+    list_means <span class="token operator">=</span> <span class="token punctuation">[</span>model<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">.</span>means_<span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                  <span class="token keyword">for</span> appliance <span class="token keyword">in</span> model<span class="token punctuation">]</span>
+
+    pi_combined <span class="token operator">=</span> compute_pi_fhmm<span class="token punctuation">(</span>list_pi<span class="token punctuation">)</span>
+    A_combined <span class="token operator">=</span> compute_A_fhmm<span class="token punctuation">(</span>list_A<span class="token punctuation">)</span>
+    <span class="token punctuation">[</span>mean_combined<span class="token punctuation">,</span> cov_combined<span class="token punctuation">]</span> <span class="token operator">=</span> compute_means_fhmm<span class="token punctuation">(</span>list_means<span class="token punctuation">)</span>
+
+    combined_model <span class="token operator">=</span> hmm<span class="token punctuation">.</span>GaussianHMM<span class="token punctuation">(</span>n_components<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>pi_combined<span class="token punctuation">)</span><span class="token punctuation">,</span> covariance_type<span class="token operator">=</span><span class="token string">'full'</span><span class="token punctuation">)</span>
+    combined_model<span class="token punctuation">.</span>startprob_ <span class="token operator">=</span> pi_combined
+    combined_model<span class="token punctuation">.</span>transmat_ <span class="token operator">=</span> A_combined
+    combined_model<span class="token punctuation">.</span>covars_ <span class="token operator">=</span> cov_combined
+    combined_model<span class="token punctuation">.</span>means_ <span class="token operator">=</span> mean_combined
+
+    <span class="token keyword">return</span> combined_model
+
+
+<span class="token keyword">def</span> <span class="token function">return_sorting_mapping</span><span class="token punctuation">(</span>means<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> copy <span class="token keyword">import</span> deepcopy
+    means_copy <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>means<span class="token punctuation">)</span>
+    means_copy <span class="token operator">=</span> np<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>means_copy<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Finding mapping</span>
+    mapping <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> val <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>means_copy<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        mapping<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>val <span class="token operator">==</span> means<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> mapping
+
+
+<span class="token keyword">def</span> <span class="token function">decode_hmm</span><span class="token punctuation">(</span>length_sequence<span class="token punctuation">,</span> centroids<span class="token punctuation">,</span> appliance_list<span class="token punctuation">,</span> states<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    hmm_states <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    hmm_power <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    total_num_combinations <span class="token operator">=</span> <span class="token number">1</span>
+
+    <span class="token keyword">for</span> appliance <span class="token keyword">in</span> appliance_list<span class="token punctuation">:</span>
+        total_num_combinations <span class="token operator">*=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> appliance <span class="token keyword">in</span> appliance_list<span class="token punctuation">:</span>
+        hmm_states<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>length_sequence<span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+        hmm_power<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>length_sequence<span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>length_sequence<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        factor <span class="token operator">=</span> total_num_combinations
+        <span class="token keyword">for</span> appliance <span class="token keyword">in</span> appliance_list<span class="token punctuation">:</span>
+            <span class="token comment"># assuming integer division (will cause errors in Python 3x)</span>
+            factor <span class="token operator">=</span> factor <span class="token operator">//</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+            temp <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>states<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> factor
+            hmm_states<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp <span class="token operator">%</span> <span class="token builtin">len</span><span class="token punctuation">(</span>centroids<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            hmm_power<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> centroids<span class="token punctuation">[</span>
+                appliance<span class="token punctuation">]</span><span class="token punctuation">[</span>hmm_states<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>hmm_states<span class="token punctuation">,</span> hmm_power<span class="token punctuation">]</span>
+
+<span class="token comment">###########################################</span>
+<span class="token comment">## read lables 设备名称标签的读取</span>
+<span class="token comment">###########################################</span>
+mm <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>path<span class="token punctuation">,</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+data1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>mm<span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        line <span class="token operator">=</span> line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        data1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+data_labels <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>data1<span class="token punctuation">,</span> columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'num'</span><span class="token punctuation">,</span> <span class="token string">'label'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">del</span> <span class="token punctuation">(</span>mm<span class="token punctuation">,</span> data1<span class="token punctuation">,</span> f<span class="token punctuation">,</span> line<span class="token punctuation">)</span>
+
+<span class="token comment">###########################################</span>
+<span class="token comment">## read meter readings</span>
+<span class="token comment">###########################################</span>
+elec <span class="token operator">=</span> OrderedDict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ggg <span class="token operator">=</span> load_dat<span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'power'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    elec<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">(</span>data_labels<span class="token punctuation">[</span><span class="token string">'label'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>data_labels<span class="token punctuation">.</span>index<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> ggg
+<span class="token keyword">del</span> ggg<span class="token punctuation">,</span> i<span class="token punctuation">,</span> data_labels
+
+<span class="token comment">## 组合总表数据</span>
+<span class="token comment">#train_main = elec['mains0'].append(elec['mains1'])</span>
+<span class="token comment">###########################################</span>
+<span class="token comment"># TODO: 训练、测试数据集的时间窗口设定</span>
+<span class="token comment">###########################################</span>
+train_main <span class="token operator">=</span> elec<span class="token punctuation">[</span><span class="token string">'mains0'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">24</span><span class="token operator">*</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+test_mains<span class="token operator">=</span>elec<span class="token punctuation">[</span><span class="token string">'mains1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">60</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+<span class="token keyword">del</span> elec<span class="token punctuation">[</span><span class="token string">'mains0'</span><span class="token punctuation">]</span>
+<span class="token keyword">del</span> elec<span class="token punctuation">[</span><span class="token string">'mains1'</span><span class="token punctuation">]</span>
+
+<span class="token comment">## 组合分表数据读数</span>
+app_name_all <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> elec<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+
+<span class="token comment">###########################################</span>
+<span class="token comment"># TODO: 选择潜在目标候选集中所包含的电器设备</span>
+<span class="token comment">###########################################</span>
+app_name<span class="token operator">=</span><span class="token punctuation">[</span>app_name_all<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">14</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+train_app_tmp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> app_num<span class="token punctuation">,</span> df_list <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>elec<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> app_name_all<span class="token punctuation">[</span>app_num<span class="token punctuation">]</span> <span class="token keyword">in</span> app_name<span class="token punctuation">:</span>
+        df_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>df_list<span class="token punctuation">)</span>  <span class="token comment"># 合成一个长表，前面是设备名称，后面是设备数据</span>
+        train_app_tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>app_name_all<span class="token punctuation">[</span>app_num<span class="token punctuation">]</span><span class="token punctuation">,</span> df_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">del</span> elec<span class="token punctuation">,</span>df_list<span class="token punctuation">,</span>app_num<span class="token punctuation">,</span>app_name<span class="token punctuation">,</span>app_name_all
+
+train_appliances <span class="token operator">=</span> train_app_tmp
+<span class="token keyword">del</span> train_app_tmp
+
+<span class="token comment">## 构造和训练FHMM模型</span>
+learnt_model <span class="token operator">=</span> OrderedDict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+num_meters <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>train_appliances<span class="token punctuation">)</span>
+
+<span class="token comment">###########################################</span>
+<span class="token comment"># TODO: 对各个设备的状态数据分别进行无监督聚类分析，寻找最佳状态数量</span>
+<span class="token comment">###########################################</span>
+<span class="token keyword">if</span> num_meters <span class="token operator">></span> <span class="token number">12</span><span class="token punctuation">:</span>
+    max_num_clusters <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    max_num_clusters <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword">del</span> num_meters
+<span class="token keyword">for</span> appliance<span class="token punctuation">,</span> meter <span class="token keyword">in</span> train_appliances<span class="token punctuation">:</span>
+    meter_data <span class="token operator">=</span> meter<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    X <span class="token operator">=</span> meter_data<span class="token punctuation">.</span>values<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> X<span class="token punctuation">.</span>ndim <span class="token operator">==</span> <span class="token number">2</span>
+    states <span class="token operator">=</span> cluster<span class="token punctuation">(</span>meter_data<span class="token punctuation">,</span> max_num_clusters<span class="token punctuation">)</span>
+    num_total_states <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>states<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Training model for submeter '&#123;&#125;'"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>appliance<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    learnt_model<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span> <span class="token operator">=</span> hmm<span class="token punctuation">.</span>GaussianHMM<span class="token punctuation">(</span>num_total_states<span class="token punctuation">,</span> <span class="token string">"full"</span><span class="token punctuation">)</span>
+    <span class="token comment"># Fit</span>
+    learnt_model<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Learnt model for : "</span> <span class="token operator">+</span> appliance<span class="token punctuation">)</span>
+<span class="token keyword">del</span> X<span class="token punctuation">,</span>appliance<span class="token punctuation">,</span>num_total_states<span class="token punctuation">,</span>states<span class="token punctuation">,</span>meter_data<span class="token punctuation">,</span>max_num_clusters<span class="token punctuation">,</span>train_appliances
+<span class="token comment"># Combining to make a AFHMM</span>
+new_learnt_models <span class="token operator">=</span> OrderedDict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> meter <span class="token keyword">in</span> learnt_model<span class="token punctuation">:</span>
+    startprob<span class="token punctuation">,</span> means<span class="token punctuation">,</span> covars<span class="token punctuation">,</span> transmat <span class="token operator">=</span> sort_learnt_parameters<span class="token punctuation">(</span>
+        learnt_model<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>startprob_<span class="token punctuation">,</span> learnt_model<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>means_<span class="token punctuation">,</span>
+        learnt_model<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>covars_<span class="token punctuation">,</span> learnt_model<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>transmat_<span class="token punctuation">)</span>
+
+    new_learnt_models<span class="token punctuation">[</span>meter<span class="token punctuation">]</span> <span class="token operator">=</span> hmm<span class="token punctuation">.</span>GaussianHMM<span class="token punctuation">(</span>startprob<span class="token punctuation">.</span>size<span class="token punctuation">,</span> <span class="token string">"full"</span><span class="token punctuation">)</span>
+    new_learnt_models<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>startprob_ <span class="token operator">=</span> startprob
+    new_learnt_models<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>transmat_ <span class="token operator">=</span> transmat
+    new_learnt_models<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>means_ <span class="token operator">=</span> means
+    new_learnt_models<span class="token punctuation">[</span>meter<span class="token punctuation">]</span><span class="token punctuation">.</span>covars_ <span class="token operator">=</span> covars
+
+<span class="token keyword">del</span> learnt_model<span class="token punctuation">,</span> meter<span class="token punctuation">,</span>transmat<span class="token punctuation">,</span>startprob<span class="token punctuation">,</span>means<span class="token punctuation">,</span>covars
+individual <span class="token operator">=</span> new_learnt_models
+model <span class="token operator">=</span> create_combined_hmm<span class="token punctuation">(</span>new_learnt_models<span class="token punctuation">)</span>
+<span class="token keyword">del</span> new_learnt_models
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"print ..........."</span><span class="token punctuation">,</span> model<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"FHMM partial_fit end................."</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">## 评估模型效果</span>
+<span class="token comment">#test_mains=test_main</span>
+learnt_states_array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+test_mains <span class="token operator">=</span> test_mains<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span><span class="token punctuation">)</span>
+temp <span class="token operator">=</span> test_mains<span class="token punctuation">.</span>values<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>test_mains<span class="token punctuation">.</span>index<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+m_p<span class="token operator">=</span>model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>temp<span class="token punctuation">)</span>
+learnt_states_array<span class="token punctuation">.</span>append<span class="token punctuation">(</span>m_p<span class="token punctuation">)</span>
+<span class="token keyword">del</span> m_p<span class="token punctuation">,</span>temp
+
+<span class="token comment"># Model</span>
+means <span class="token operator">=</span> OrderedDict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> elec_meter<span class="token punctuation">,</span> model <span class="token keyword">in</span> individual<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    means<span class="token punctuation">[</span>elec_meter<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>model<span class="token punctuation">.</span>means_<span class="token punctuation">.</span><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    means<span class="token punctuation">[</span>elec_meter<span class="token punctuation">]</span><span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">del</span> individual<span class="token punctuation">,</span>elec_meter
+
+decoded_power_array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+decoded_states_array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> learnt_states <span class="token keyword">in</span> learnt_states_array<span class="token punctuation">:</span>
+    <span class="token punctuation">[</span>decoded_states<span class="token punctuation">,</span> decoded_power<span class="token punctuation">]</span> <span class="token operator">=</span> decode_hmm<span class="token punctuation">(</span>
+        <span class="token builtin">len</span><span class="token punctuation">(</span>learnt_states<span class="token punctuation">)</span><span class="token punctuation">,</span> means<span class="token punctuation">,</span> means<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> learnt_states<span class="token punctuation">)</span>
+    decoded_states_array<span class="token punctuation">.</span>append<span class="token punctuation">(</span>decoded_states<span class="token punctuation">)</span>
+    decoded_power_array<span class="token punctuation">.</span>append<span class="token punctuation">(</span>decoded_power<span class="token punctuation">)</span>
+
+<span class="token keyword">del</span> means<span class="token punctuation">,</span>decoded_states<span class="token punctuation">,</span>decoded_power<span class="token punctuation">,</span>learnt_states<span class="token punctuation">,</span>learnt_states_array
+
+prediction <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    decoded_power_array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> index<span class="token operator">=</span>test_mains<span class="token punctuation">.</span>index<span class="token punctuation">)</span>
+
+out_df<span class="token operator">=</span>pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>test_mains<span class="token punctuation">,</span>prediction<span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+out_df<span class="token punctuation">[</span><span class="token string">'pred'</span><span class="token punctuation">]</span><span class="token operator">=</span>out_df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token keyword">del</span> prediction<span class="token punctuation">,</span>decoded_power_array<span class="token punctuation">,</span>decoded_states_array
+
+out_df<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>label<span class="token operator">=</span><span class="token string">"Pred"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Disaggregated Data by AFHMM within 24 hours by sample of 1HZ'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">## 只比较原始功率曲线和预测曲线</span>
+out_df2<span class="token operator">=</span>out_df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+out_df2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>label<span class="token operator">=</span><span class="token string">"Pred"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Disaggregated Data by AFHMM within 24 hours by sample of 1HZ'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># fff=out_df.to_csv('out.csv')</span>
+<span class="token comment"># print(fff)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"finished disaggregated data! "</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2021/06/04/SIVdp3WaxHUAysB.png" alt="image-20210604180121411"></p>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/mywiki.github.io/56868/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>SVM模型应用</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/mywiki.github.io/55978/">
+        <span>FHMM模型数据接口尝试修改</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/mywiki.github.io/46953/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">总结：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E6%98%AF%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">下面是详细代码</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        vm
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/mywiki.github.io/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/mywiki.github.io/js/meadow.js"></script>
+
+</body>
+</html >

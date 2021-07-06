@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/mywiki.github.io/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/mywiki.github.io/css/main.css">
+<link rel="stylesheet" href="/mywiki.github.io/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            hmm理论和公式编写 | vm
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/mywiki.github.io/" class="mdui-typo-headline">vm</a>
+    <a href="/mywiki.github.io/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/mywiki.github.io/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/mywiki.github.io/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-gallery"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Gallery</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="https://www.biaoqingb.com/uploads/img1/20200205/40bdfc2945fd8a7a05dc1f55e71e6592.jpg"/>
+                
+            </div>
+            <div class="sidebar-author-name">vm</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mont2018a@@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/vmpet " class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-jianshu"></i></span>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/1719f031acd3" class="mdui-chip-title">jianshu</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://weibo.com/vlnk21" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/mywiki.github.io/63534/">hmm理论和公式编写</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2021-05-19
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2021-07-06
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/">图集</a> > <a class="category-link" href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/tech/">tech</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=hmm理论和公式编写&url=https://github.com/vmpet/mywiki.github.io/63534/&pic=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=hmm理论和公式编写&url=https://github.com/vmpet/mywiki.github.io/63534/&via=vm" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/vmpet/mywiki.github.io/63534/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://github.com/vmpet/mywiki.github.io/63534/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/vmpet/mywiki.github.io/63534/&title=hmm理论和公式编写" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=vm&title=hmm理论和公式编写&summary=&pics=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&url=https://github.com/vmpet/mywiki.github.io/63534/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://github.com/vmpet/mywiki.github.io/63534/&text=hmm理论和公式编写" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/%E7%AE%97%E6%B3%95/ >算法</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/HMM/ >HMM</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p><img src="https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="img"></p>
+<h4 id="Assumptions"><a href="#Assumptions" class="headerlink" title="Assumptions"></a>Assumptions</h4><ol>
+<li>(1st order) <strong>Markov assumption</strong> (for transition probability): $p(s_i|s_1, s_2, s_3, \dots, s_{i-1}) = p(s_i|s_{i-1})$</li>
+<li><strong>Output independence</strong> (for emission probability) $p(o_i|s_1, s_2, s_3, \dots, s_{i-1}) = p(o_i|s_i)$</li>
+</ol>
+<h4 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h4><ul>
+<li>$S = {s_1, s_2, s_3, \dots, s_i}$: a set of hidden states</li>
+<li>$O = {o_1, o_2, o_3, \dots, o_i}$: a set of observed events</li>
+<li>$A = a_{11}\dots a_{ij} \dots a_{NN}$: the state transition probability matrix</li>
+<li>$B = b_i(o_t)$: the emission probability matrix</li>
+<li>$\pi = {\pi_1, \pi_2, \pi_3, \dots, \pi_i}$: the initial state probability distribution</li>
+</ul>
+<h4 id="Likelihood"><a href="#Likelihood" class="headerlink" title="Likelihood"></a>Likelihood</h4><p>With HMM $\lambda = (A, B, \pi)$, compute the likelihood of observation sequence $O$.</p>
+<h5 id="1-Naive-approach"><a href="#1-Naive-approach" class="headerlink" title="1. Naive approach"></a>1. Naive approach</h5><p>$O$: the observed sequence<br>$S$: one possible hidden state sequence<br>So we get the joint probability of them:<br>$$P(O, S) = P(O|S)P(S) = \prod_{i=1}^TP(o_i|s_i) \times \prod_{i=1}^TP(s_i|s_{i-1})\times \pi_{s_0}$$ Now we can compute the probability of the observed sequence $O$ with all possible hidden state sequences by marginal probability: $$\begin{aligned} P(O) &amp;= \sum_SP(O,S) \ &amp;= \sum_SP(O|S)P(S) \ &amp;= \sum_S\prod_{i=1}^TP(o_i|s_i) \times \prod_{i=1}^TP(s_i|s_{i-1}) \times \pi_{s_0} \end{aligned}$$<br>However, time complexity is huge $TN^T$. Instead we use forward algorithm, a dynamic programming approach, whose time complexity is $TN^2$.</p>
+<h5 id="2-Forward-algorithm"><a href="#2-Forward-algorithm" class="headerlink" title="2. Forward algorithm"></a>2. Forward algorithm</h5><p>Define the probability of being in state $j$ after seeing $t$ observations (<strong>with all possible hidden state sequences till $\bold t$</strong>), given the parameter sets $\lambda(A, B, \pi)$ $$\begin{aligned} \alpha_t(j) &amp;= P(o_1, o_2, o_3, \dots, o_t, s_t=j) \ &amp;= \left[ \sum_{i=1}^N\alpha_{t-1}(i)a_{ij}\right] b_j(o_t) \end{aligned}$$</p>
+<ul>
+<li><strong>Initialization</strong> $$\alpha_1(j) = \pi_jb_j(o_1) \quad 1 \le j \le N$$</li>
+<li><strong>Loop</strong> $$\alpha_t(j) = \left[ \sum_{i=1}^N\alpha_{t-1}(i)a_{ij}\right] b_j(o_t) \quad 1 \le j \le N, 1 &lt; t \le T$$</li>
+<li><strong>Termination</strong> $$P(O|\lambda) = \sum_{i=1}^N\alpha_T(i)$$</li>
+</ul>
+<h5 id="3-Backward-algorithm"><a href="#3-Backward-algorithm" class="headerlink" title="3. Backward algorithm"></a>3. Backward algorithm</h5><p>Define the probability of seeing the observations from time $t + 1$ to $T$ (<strong>with all possible hidden state sequences till $\bold{t+1}$</strong>), given that we are in state $j$ at time $t$.<br>$$\beta_t(j) = P(o_{t+1}, o_{t+2}, \dots, o_T|s_t=j)$$</p>
+<ul>
+<li><strong>Initialization</strong> $$\beta_T(j) = 1 \quad 1 \le j \le N$$</li>
+<li><strong>Loop</strong> $$\beta_t(j) = \sum_{i=1}^N\beta_{t+1}(i)a_{ji}b_i(o_{t+1}) \quad 1 \le j \le N, 1 \le t &lt; T$$</li>
+<li><strong>Termination</strong> $$P(O|\lambda) = \sum_{i=1}^N\pi_i\beta_1(i)b_i(o_1)$$</li>
+</ul>
+<h4 id="Decoding"><a href="#Decoding" class="headerlink" title="Decoding"></a>Decoding</h4><p>With HMM $\lambda = (A, B, \pi)$, and the observation sequence $O$, compute the most possible hidden state sequence $S$.</p>
+<h5 id="1-Naive-approach-1"><a href="#1-Naive-approach-1" class="headerlink" title="1. Naive approach"></a>1. Naive approach</h5><p>Enumerate all possible hidden state sequences, compute relative likelihoods with forward algorithm, and choose the biggest one. Still with time complexity of $N^T$ to list all state sequences.</p>
+<h5 id="2-Viterbi-algorithm"><a href="#2-Viterbi-algorithm" class="headerlink" title="2. Viterbi algorithm"></a>2. Viterbi algorithm</h5><p>Define the probability of being in state $j$ after seeing $t$ observations and passing through the most possible state sequence $s_1 \dots s_{t−1}$ that maximizes the likelihood. $$v_t(j) = \max_{s_1, \dots, s_{t-1}}P(s_{1} \dots s_{t-1}, o_1 \dots o_t, s_t = j)$$</p>
+<p>Besides to the regular probability matrix like forward algorithm, we need another <strong>backpointer matrix</strong> that records the paths, where each cell records the coming state id.</p>
+<ul>
+<li><strong>Initialization</strong> $$v_1(j) = \pi_jb_j(o_1) \quad 1 \le j \le N$$ $$bt_1(j) = 0 \quad 1 \le j \le N$$</li>
+<li><strong>Loop</strong> $$v_t(j) = \max_{i=1}^Nv_{t-1}(i)a_{ij} b_j(o_t) \quad 1 \le j \le N, 1 &lt; t \le T$$ $$bt_t(j) = argmax_{i=1}^Nv_{t-1}(i)a_{ij} b_j(o_t) \quad 1 \le j \le N, 1 &lt; t \le T$$</li>
+<li><strong>Termination</strong> $$\hat P = \max_{i=1}^Nv_T(i)$$ $$\hat s_T = argmax_{i=1}^Nv_T(i)$$</li>
+</ul>
+<h4 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h4><p>Given the observation sequences $\sum_{i=0}^nO$, and a set of labels $\sum_{j=0}^mS$， compute the HMM parameters $\lambda = (A, B, \pi)$.<br>This could be resolved by EM algorithm.</p>
+<h5 id="1-Expectations"><a href="#1-Expectations" class="headerlink" title="1. Expectations"></a>1. Expectations</h5><ol>
+<li>Given observation $O$ and and the $\lambda = (A, B, \pi)$, we have the probability of being at state $s_i$ at time $t$ <em>(no transition)</em>:<br>$$\gamma_t(i) = P(i_t = s_i | O,\lambda) = \frac{P(i_t = s_i ,O|\lambda)}{P(O|\lambda)} = \frac{P(i_t = s_i ,O|\lambda)}{\sum\limits_{j=0}^NP(i_t = s_j ,O|\lambda)}$$<br>By definitions of forward and backward algorithms: $$P(i_t = s_i ,O|\lambda) = \alpha_t(i)\beta_t(i)$$<br>Why?<br>$$\alpha_t(i) = P(o_1,o_2,…o_t, i_t =s_i | \lambda)$$<br>$$\beta_t(i) = P(o_{t+1},o_{t+2},…o_T| i_t =s_i, \lambda)$$<br>$$\begin{aligned} \alpha_t(i)\beta_t(i) &amp;= P(o_1,o_2,…o_t, i_t =s_i | \lambda) \times P(o_{t+1},o_{t+2},…o_T| i_t =s_i , \lambda) \ &amp;= P(i_t = s_i, o_1,o_2,…o_t, o_{t+1},o_{t+2},…o_T |\lambda) \ &amp;= P(i_t = s_i, O|\lambda) \end{aligned}$$<br>This is probability of being at state $i$ at time $t$; we can sum over all probabilities of being at all states at this $t$, so we have: $$\gamma_t(i) = \frac {\alpha_t(i)\beta_t(i)}{\sum\limits_{j=1}^N \alpha_t(j)\beta_t(j)}$$</li>
+<li>Given observation $O$ and and the $\lambda = (A, B, \pi)$, we have the probability of being at state $s_i$ at time $t$, and at state $s_j$ at time $t + 1$ <em>(transition)</em>: $$\xi_t(i,j) = P(i_t = s_i, i_{t+1}=s_j| O,\lambda) = \frac{P(i_t = s_i, i_{t+1}=s_j, O|\lambda)}{P(O|\lambda)} =\frac{P(i_t = s_i, i_{t+1}=s_j, O|\lambda)}{\sum\limits_{k=0}^N\sum\limits_{l=0}^NP(i_t = s_k, i_{t+1}=s_l, O|\lambda)}$$<br>By definitions of forward and backward algorithms:<br>$$P(i_t = s_i, i_{t+1}=s_j, O|\lambda) = \alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j)$$<br>Why?<br>$$\alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j) = P(o_1,o_2,…o_t, i_t =s_i | \lambda) \times a_{ij} \times b_j(o_{t+1}) \times P(o_{t+2},o_{t+3},…o_T| i_t =s_j, \lambda)$$<br>We can sum over all possible state transitions at this time $t$, so we have:<br>$$\xi_t(i,j) = \frac{\alpha_t(i)a_{ij}b_j(o_{t+1})\beta_{t+1}(j)}{\sum\limits_{k=0}^N\sum\limits_{l=0}^N\alpha_t(k)a_{kl}b_l(o_{t+1})\beta_{t+1}(l)}$$</li>
+<li>In all, we have:<ul>
+<li>Expectation of being at state $i$ given observation $O$: $\sum\limits_{t=1}^T\gamma_t(i)$</li>
+<li>Expectation of transiting from state $i$ given observation $O$: $\sum\limits_{t=1}^{T-1}\gamma_t(i)$</li>
+<li>Expectation of transiting from state $i$ to $j$ given observation $O$: $\sum\limits_{t=1}^{T-1}\xi_t(i,j)$</li>
+</ul>
+</li>
+</ol>
+<h5 id="2-Maximization"><a href="#2-Maximization" class="headerlink" title="2. Maximization"></a>2. Maximization</h5><p>$Q$ function of EM (Baum-Welch):<br>$$\begin{aligned} Q(\lambda, \overline{\lambda}) &amp;= \sum_{I}P(I|O,\overline{\lambda})logP(O,I|\lambda) \ &amp;= \sum_{I} \frac {P(O, I|\overline{\lambda})}{\textcolor{red}{P(O|\overline{\lambda})}}logP(O,I|\lambda) \ &amp;= \sum_{I}P(O, I|\overline{\lambda})logP(O,I|\lambda) \end{aligned}$$<br>So the $\overline{\lambda}$ we want could be computed from:<br>$$\overline{\lambda} = argmax_{\lambda}\sum\limits_{I}P(O,I|\overline{\lambda})logP(O,I|\lambda)$$<br>Since $$P(O,I|\lambda) = \prod_{d=1}^D\pi_{i_1^{(d)}}b_{i_1^{(d)}}(o_1^{(d)})a_{i_1^{(d)}i_2^{(d)}}b_{i_2^{(d)}}(o_2^{(d)})…a_{i_{T-1}^{(d)}i_T^{(d)}}b_{i_T^{(d)}}(o_T^{(d)})$$<br>Plug in and we get:<br>$$\overline{\lambda} = argmax_{\lambda}\sum\limits_{d=1}^D\sum\limits_{I}P(O,I|\overline{\lambda}) \left[ log\pi_{i_1} + \sum\limits_{t=1}^{T-1}log;a_{i_t,i_{t+1}} + \sum\limits_{t=1}^Tlog b_{i_t}(o_t) \right]$$<br>We could maximize 3 components 1 by 1:</p>
+<ul>
+<li>$$\overline{\pi_i} = argmax_{\pi_{i_1}} \sum\limits_{d=1}^D\sum\limits_{I}P(O,I|\overline{\lambda})log\pi_{i_1} = argmax_{\pi_{i}} \sum\limits_{d=1}^D\sum\limits_{i=1}^NP(O,i_1^{(d)} =i|\overline{\lambda})log\pi_{i}$$<br>Since $\sum\limits_{i=1}^N\pi_i =1$ as a constraint, we apply Lagrange Multiplier Method here:<br>$$\overline{\pi_i} = argmax_{\pi_{i}}\sum\limits_{d=1}^D\sum\limits_{i=1}^NP(O,i_1^{(d)} =i|\overline{\lambda})log\pi_{i} + \gamma(\sum\limits_{i=1}^N\pi_i -1)$$<br>Take derivation on above and make it equal to 0, we have:<br>$$\sum\limits_{d=1}^DP(O,i_1^{(d)} =i|\overline{\lambda}) + \gamma\pi_i = 0$$<br>Make $i$ from 1 to $N$ and sum them all over, we have:<br>$$\sum\limits_{d=1}^D\sum\limits_{n=1}^NP(O,i_1^{(d)} = n|\overline{\lambda}) + \sum\limits_{n=1}^N\gamma\pi_n = 0$$<br>Again since $\sum\limits_{i=1}^N\pi_i =1$, and $\sum\limits_{n=1}^NP(O,i_1 = n|\overline{\lambda}) = P(O|\overline{\lambda})$ <em>(marginal probability of $O$)</em>. Plug in these two we have:<br>$$\begin{aligned} \sum\limits_{d=1}^D\sum\limits_{n=1}^NP(O,i_1^{(d)} = n|\overline{\lambda}) + \gamma &amp;= 0\ \sum\limits_{d=1}^DP(O|\overline{\lambda}) + \gamma &amp;= 0 \end{aligned}$$<br>Now we have value of $\gamma$, plug in $\gamma$ we have:<br>$$\pi_i =\frac{\sum\limits_{d=1}^DP(O,i_1^{(d)} =i|\overline{\lambda})}{\sum\limits_{d=1}^DP(O|\overline{\lambda})} = \frac{\sum\limits_{d=1}^DP(O,i_1^{(d)} =i|\overline{\lambda})}{DP(O|\overline{\lambda})} = \frac{\sum\limits_{d=1}^DP(i_1^{(d)} =i|O, \overline{\lambda})}{D} = \frac{\sum\limits_{d=1}^DP(i_1^{(d)} =i|O^{(d)}, \overline{\lambda})}{D}$$<br>Since in the Expectation step we have:<br>$$\gamma_1^{(d)}(i) = P(i_1^{(d)} =i|O^{(d)}, \overline{\lambda})$$<br>So we have:<br>$$\pi_i = \frac{\sum\limits_{d=1}^D\gamma_1^{(d)}(i)}{D}$$</li>
+<li>$$\overline{a_{ij}} = argmax_{a_{ij}}\sum\limits_{d=1}^D\sum\limits_{I}\sum\limits_{t=1}^{T-1}P(O,I|\overline{\lambda})log;a_{i_t,i_{t+1}} = \sum\limits_{d=1}^D\sum\limits_{i=1}^N\sum\limits_{j=1}^N\sum\limits_{t=1}^{T-1}P(O,i_t^{(d)} = i, i_{t+1}^{(d)} = j|\overline{\lambda})loga_{ij}$$<br>We have $\sum\limits_{j=1}^Na_{ij} =1$, use Lagrange Multiplier Method and take derivation and get:<br>$$\begin{aligned} a_{ij} &amp;= \frac{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}P(O^{(d)}, i_t^{(d)} = i, i_{t+1}^{(d)} = j|\overline{\lambda})}{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}P(O^{(d)}, i_t^{(d)} = i|\overline{\lambda})} \ &amp;= \frac {\frac {\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}P(O^{(d)}, i_t^{(d)} = i, i_{t+1}^{(d)} = j|\overline{\lambda})}{\textcolor{green}{\sum\limits_{d=1}^DP(O^{(d)}|\overline{\lambda}))}}} { \frac {\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}P(O^{(d)}, i_t^{(d)} = i|\overline{\lambda})} {\textcolor{green}{\sum\limits_{d=1}^DP(O^{(d)}|\overline{\lambda}))}} } \ &amp;= \frac {\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}P(i_t^{(d)} = i, i_{t+1}^{(d)} = j|O^{(d)}, \overline{\lambda})} {\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}P(i_t^{(d)} = i | O,\overline{\lambda})} \end{aligned}$$<br>Again, since in Expectation step, we have:<br>$$\xi_t^{(d)}(i,j) = P(i_t^{(d)} = i, i_{t+1}^{(d)} = j|O^{(d)}, \overline{\lambda})$$<br>$$\gamma_t^{(d)}(i) = P(i_t^{(d)} = i | O,\overline{\lambda})$$<br>So we have:<br>$$a_{ij} = \frac{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}\xi_t^{(d)}(i,j)}{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}\gamma_t^{(d)}(i)}$$</li>
+<li>$$\overline{}\sum\limits_{d=1}^D\sum\limits_{I}\sum\limits_{t=1}^{T}P(O,I|\overline{\lambda})log;b_{i_t}(o_t) = \sum\limits_{d=1}^D\sum\limits_{j=1}^N\sum\limits_{t=1}^{T}P(O,i_t^{(d)} = j|\overline{\lambda})log;b_{j}(o_t)$$<br>Since $\sum\limits_{k=1}^Mb_{j}(k) =1$, we apply the same procedure as above, and have:<br>$$\begin{aligned} b_{j}(k) &amp;= \frac{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T}P(O,i_t^{(d)} = j|\overline{\lambda})I(o_t^{(d)}=v_k)}{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T}P(O,i_t^{(d)} = j|\overline{\lambda})} \ &amp;= \frac{\sum\limits_{d=1}^D\sum\limits_{t=1, o_t^{(d)}=v_k}^{T}\gamma_t^{(d)}(j)}{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T}\gamma_t^{(d)}(j)} \end{aligned}$$</li>
+<li>In all, we have:<br>$$\pi_i = \frac{\sum\limits_{d=1}^D\gamma_1^{(d)}(i)}{D}$$<br>$$a_{ij} = \frac{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}\xi_t^{(d)}(i,j)}{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T-1}\gamma_t^{(d)}(i)}$$<br>$$b_{j}(k) = \frac{\sum\limits_{d=1}^D\sum\limits_{t=1, o_t^{(d)}=v_k}^{T}\gamma_t^{(d)}(j)}{\sum\limits_{d=1}^D\sum\limits_{t=1}^{T}\gamma_t^{(d)}(j)}$$</li>
+</ul>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/mywiki.github.io/29283/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>随笔</span>
+      </a>
+    
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/mywiki.github.io/63534/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Assumptions"><span class="toc-number">1.</span> <span class="toc-text">Assumptions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Components"><span class="toc-number">2.</span> <span class="toc-text">Components</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Likelihood"><span class="toc-number">3.</span> <span class="toc-text">Likelihood</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Naive-approach"><span class="toc-number">3.1.</span> <span class="toc-text">1. Naive approach</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Forward-algorithm"><span class="toc-number">3.2.</span> <span class="toc-text">2. Forward algorithm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Backward-algorithm"><span class="toc-number">3.3.</span> <span class="toc-text">3. Backward algorithm</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Decoding"><span class="toc-number">4.</span> <span class="toc-text">Decoding</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Naive-approach-1"><span class="toc-number">4.1.</span> <span class="toc-text">1. Naive approach</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Viterbi-algorithm"><span class="toc-number">4.2.</span> <span class="toc-text">2. Viterbi algorithm</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Learning"><span class="toc-number">5.</span> <span class="toc-text">Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Expectations"><span class="toc-number">5.1.</span> <span class="toc-text">1. Expectations</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Maximization"><span class="toc-number">5.2.</span> <span class="toc-text">2. Maximization</span></a></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        vm
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/mywiki.github.io/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/mywiki.github.io/js/meadow.js"></script>
+
+</body>
+</html >

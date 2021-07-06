@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/mywiki.github.io/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/mywiki.github.io/css/main.css">
+<link rel="stylesheet" href="/mywiki.github.io/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            随笔 | vm
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/mywiki.github.io/" class="mdui-typo-headline">vm</a>
+    <a href="/mywiki.github.io/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/mywiki.github.io/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/mywiki.github.io/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a href="/mywiki.github.io/categories/%E5%9B%BE%E9%9B%86/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-gallery"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Gallery</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="https://www.biaoqingb.com/uploads/img1/20200205/40bdfc2945fd8a7a05dc1f55e71e6592.jpg"/>
+                
+            </div>
+            <div class="sidebar-author-name">vm</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mont2018a@@gmail.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://github.com/vmpet " class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-jianshu"></i></span>
+                    <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/1719f031acd3" class="mdui-chip-title">jianshu</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a target="_blank" rel="noopener" href="https://weibo.com/vlnk21" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/mywiki.github.io/29283/">随笔</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2021-05-20
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2021-05-20
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/mywiki.github.io/categories/%E6%80%9D%E6%83%B3%EF%BC%8C%E8%A7%82%E5%BF%B5%EF%BC%8C%E5%AD%A6%E6%9C%AF/">思想，观念，学术</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=随笔&url=https://github.com/vmpet/mywiki.github.io/29283/&pic=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=随笔&url=https://github.com/vmpet/mywiki.github.io/29283/&via=vm" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/vmpet/mywiki.github.io/29283/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://github.com/vmpet/mywiki.github.io/29283/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/vmpet/mywiki.github.io/29283/&title=随笔" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=vm&title=随笔&summary=&pics=https://github.com/vmpet/mywiki.github.io/mywiki.github.io/null&url=https://github.com/vmpet/mywiki.github.io/29283/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://github.com/vmpet/mywiki.github.io/29283/&text=随笔" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/%E8%AE%A4%E7%9F%A5%E5%A4%B1%E8%B0%83/ >认知失调</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/%E6%83%85%E7%BB%AA/ >情绪</a>
+      </i>
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /mywiki.github.io/tags/%E5%A4%A7%E8%84%91/ >大脑</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>Imbalanced thinking：思维平衡？</p>
+<p>如果你多走一会儿，或者做做俯卧撑或者慢跑，就会增强大脑的血流量，进而增强思维活性，让有助于启发更好的想法。</p>
+<p><img src="https://i.loli.net/2021/05/20/Adtf4TCOHbiB9rY.png" alt="image-20210520103701345"></p>
+<p>特别要注意愤怒情绪的后续行为决策，可以写邮件说“我很生气”这类事情，学会控制情绪，保存邮件后进行15分钟的剧烈运动。不但有助于增强肌肉力度，还会将所有的愤怒发泄出去，让自己变得平静下来。然后再以礼貌的方式保存一封邮件，仅说明重要事实即可。</p>
+<h3 id="为什么儿童教育很重要？"><a href="#为什么儿童教育很重要？" class="headerlink" title="为什么儿童教育很重要？"></a>为什么儿童教育很重要？</h3><p>Only a well-educated child will be able to bring positivity to society, contribute to the economy of a nation, or even guide others towards living an enlightened life.</p>
+<p><img src="https://i.loli.net/2021/05/20/eV5lP4rWcHDEMQz.png" alt="image-20210520105018785"></p>
+<p><strong>Elon Musk</strong>不想把孩子送到美国普通学校读书，他认为这些学校没有能力让孩子学习到现在社会应该学习的知识。因此他在自己的工厂共同创办了以锁特殊的学校，以便让自己和受雇员工的孩子们可以在当代社会接受正确的教育。</p>
+<p>为了使儿童获得最大的智力发展，必须创建安全，支持和互动的学习环境，以便儿童发展那些急需的批判性思维技能。与其简单地教育儿童，不如提供一种新颖的，发人深省的氛围，使幼儿教育能够蓬勃发展。实际上，在家里，父母在为子女提供学龄前教育时应遵循相同的模式。</p>
+<p>在教育者和寻求教育者之间需要建立健康，支持和启发性的纽带。</p>
+<h3 id="金钱能解决多少问题？"><a href="#金钱能解决多少问题？" class="headerlink" title="金钱能解决多少问题？"></a>金钱能解决多少问题？</h3><p>因为种族隔离，南非的黑人不被允许在白人地区开展业务，也未获得许可证。尽管有些黑人有足够的钱，但他们不快乐，因为他们的生活缺乏自由–做白人可以享受生活的自由。只有自由才能帮助他们过充实的生活。如果没有自由去做自己想做的事，生活就变得毫无意义。所以需要一部分团结起来，为争取自己的正当自由而奋斗。</p>
+<p>为了取得成功，您需要自由的环境来选择专注于给定的领域。</p>
+<h3 id="东南亚文化圈"><a href="#东南亚文化圈" class="headerlink" title="东南亚文化圈"></a>东南亚文化圈</h3><p>越南确实像韩国和日本一样，是中国圈的一部分，它们以狂热的职业道德而闻名（或声名狼藉？）。但是，与这些社会的相似之处主要在于“高级文化“high culture”领域（即儒家的哲学和价值观，来自中国的艺术影响力等）。</p>
+<p>英国和日本人并不总是善良的统治者，但他们通过发展公共机构和基础设施，为马来西亚，新加坡，香港和台湾的未来现代化奠定了良好的基础。法国在1870年至1945年左右对越南的殖民化几乎完全集中在原材料的开采上，对越南的发展做出的积极贡献较少。</p>
+<p>1975-1986年的饥荒，人类外流（“船民”）和整体经济灾难。直到1989年，政府的大部分资源和注意力都转移到了对柬埔寨的占领以及与中国的短暂破坏性边界战争上。由于这些冲突，越南在政治上和经济上与东盟国家，中国以及美国保持隔离，而后者则实行了贸易禁运。改革进程始于1986年，但直到1994年左右才开始与邻国和美国真正实现贸易和投资开放。那时，越南的经济陷入了困境。同时，她的许多邻居已经有了一些坚实的工业基础设施，并加入了全球制造业供应链。</p>
+<p>中国在精简国有企业运营，出售无利可图的实体，以及通过向外部投资者大量发行股票为剩余的实体注入新鲜血液方面，情况要好得多。在越南，许多最大的国有企业仍由政府所有，而其他一些国有企业仍参与非核心和非战略性行业，例如啤酒酿造，酒店，食品加工，甚至向游客出售冰淇淋！</p>
+<p>政府对基础设施发展的态度是混乱的，不系统的。越南没有将精力集中在几个可以带来整体“一掷千金”的大型项目上，而是将资源分散在许多经济价值不高的小型开发项目中（小型飞机场，海港，道路和精炼厂远离经济活动） ）。这通常归因于公共领域的力量薄弱，对省政府的中央控制有限以及“社会主义思维”，他们不想看到西贡和周边省份的发展速度超过全国其他地区。</p>
+<p>越南的金融市场仍然很小且原始。股市仍处于“前沿”类别（以及保加利亚，孟加拉国和尼日利亚等国家）。债券的二级市场甚至根本不存在。结果，许多国家的潜在投资流入了低向往，非生产性和投机性资产（银行存款，外币，黄金和房地产）。<br>其他和相关的问题，例如普遍的裙带关系和腐败，高等教育体系差，“人才外流”等。</p>
+<p>VN越南应该研究哪些社会和政治条件使所有这些不同群体得以蓬勃发展。</p>
+<p>与过去相比，越南的年轻一代更加灵活，信息灵通。正如我所看到的，问题在于这些领导人正在与风险规避和短期思维的旧趋势背道而驰。好消息是，越南可以在政治和社会稳定以及免受外国干涉的时期中面对这些挑战，这在越南历史上几乎是前所未有的。</p>
+<p>或许越南确实在变得更加富裕，但是却付出了环境，社会正义，文化，特性以及子孙后代的沉重代价。在某种程度上，当前模型（很大程度上依赖于资源开采，外国投资和建筑/房地产）的低挂成果将消失。当前这一代对“增长”的专心致志很少关注发展的更为微妙的无形方面，例如增长质量，责任感，效率，可持续性或文化/美学。</p>
+<h3 id="知识和智慧"><a href="#知识和智慧" class="headerlink" title="知识和智慧"></a>知识和智慧</h3><pre><code>Difference Between Knowledge and Wisdom
+</code></pre>
+<p>尽管知识每天都在不断累积，但智慧却可以持续更长的时间。根据现有的情况，年龄和其他一些因素，知识可能会消失。但是，智慧是一种财富，一直持续到您最后一口气为止。</p>
+<p>一个人一生可能参与许多辩论。但是，他可能缺乏对知识和智慧的一般认识。因此，在适当的时候，他无法充分利用自己的技能。</p>
+<p>我们每天都在学习新事物并积累我们的知识。但是我们没有保留这些知识。在人生旅途中的某个时间点，它可能会消失。</p>
+<p>什么是知识：我们从教育或经验中学到的信息，事实和技能。简而言之，它是一个主体的假设性或实践性感知。您可以将知识视为结合信息和学习的胶水。在缺乏相关知识的情况下，您可能会在艰难处境下生存下来。例如，如果您缺乏足够的阅读知识，则无法完全解读文本。</p>
+<p>什么是智慧？ 经验丰富，知识渊博，对特定事件有适当的判断素质。具有很强的理解能力和觉察力。</p>
+<p>智慧需要良好的感知能力和明确是非的判断能力。知识是对特定领域主题的熟练程度。通过深入研究和了解事实，任何人都可以实现对主题的了解。但是智慧需要更为深入的理解，并需要解决在某些情况下与哪些事实会产生相关影响的能力。</p>
+<p>智慧致力于知识，并根据经验，评估所学知识而进行巧妙地实践知识。</p>
+<p>知识与了解很多东西有关，而智慧则与在实际应用中保留和实现这些东西有关。</p>
+<h3 id="教育的目标"><a href="#教育的目标" class="headerlink" title="教育的目标"></a>教育的目标</h3><p>教育的目的是向年轻人灌输人类精神和美德，使他们成长为不仅成为世界负责任的公民，而且成为照亮周围人类的领导之光。教育不应仅以机械方式分配课程而受到限制，而必须激发人们的思想。</p>
+<p>如果现代教育能够成功地为学生提供使他们获得良好工作的学位，那么它就被认为是非常有效的。它已经变得非常唯物主义。</p>
+<p>就像在自动化装配线上的工业中一样，可以进行学习。整个想法是培养拥有学位并在其他类似机构中获得最高薪水的工作的学生。</p>
+<p>这种教学法的另一面就像是将水倒入桶中，向学生的大脑填充信息而不是知识。这就像将内容放入存储卡中一样。这最终导致学生对学习失去兴趣，并努力仅在考试中获得良好的成绩。</p>
+<p>通常，过分强调评分系统会导致学生的价值观受到侵蚀。相对的评分系统使学生之间的竞争激烈，而不会成为愿意合作来获得知识的同事。</p>
+<p>在极端情况下，这会导致学生精疲力尽，一些顶级研究所甚至自杀，无法应付缺乏人文精神的制度。</p>
+<p>学生花费了大量的时间，不仅学习，而且体验并为周围的社会做出贡献。它传达了信念和价值观，有助于在我们不断发展的同时维持我们所生活的系统。对学习的热爱不仅是一个学术过程，而且是一种生活方式。</p>
+<p>孩子就会理解这个概念。仅仅记住一个理论是不够的！有效的例子和视听材料引起了人们的兴趣。</p>
+<p><img src="C:/Users/zx-176/AppData/Roaming/Typora/typora-user-images/image-20210520112314039.png" alt="image-20210520112314039"></p>
+<p>参考<a target="_blank" rel="noopener" href="https://www.beaninspirer.com/">https://www.beaninspirer.com/</a></p>
+<p>Enrich your Mind and Life with Knowledge</p>
+<p>用知识丰富您的思想和生活</p>
+<p>Education: The Asset in Exploring Our Intellect and Building Our Character  教育：探索我们的智慧和树立人格的资产</p>
+<p>Character Building is Vital for Education 品格建设对教育至关重要</p>
+<p>想法不是对您打算做什么含糊不清或不清楚，而是SMART，它是“具体，可衡量，可实现，现实和有时限的目标”的首字母缩写。</p>
+<p>An Educated Woman Plays An Important Role In Educating Her Next Generations 受教育的妈妈为什么很重要</p>
+<p>通过远见，目标，创新，灵感，培训，动力，团队合作，专注和创造力取得成功的道路。无论您在哪里学习或在同班同学中的表现如何，都无关紧要。</p>
+<p>重要的是您能够将学习到的东西应用到日常生活中。</p>
+<p>要释放自由，教育是金钥匙。有教养的女人就像一个神奇的乘法器，其好处可以世代相传。</p>
+<p>简单的逻辑是，受过教育的妇女可以更好地教育她的孩子。生活方式将变得更好；这给了更多的机会来养育更多的好孩子，因此一个国家受过教育的公民将成比例地增加。投资一个女人将确保收益传播给她周围的人和她的周围。妇女是每个家庭的重要组成部分，如果她受过教育并有足够的发展机会，那么好处将在各个领域得到体现-不仅在家庭内部，而且在整个社会。</p>
+<p>常识健全教育</p>
+<p>Common Sense Perfects Education</p>
+<p>常识使一个人有足够的能力解决任何现实生活中的问题，并且只有在获得常规教育的适当过程中才能由个人自己培养。</p>
+<p>受过良好教育的人可能并不总是对各处的知识都感到满意，而具有常识的人可以回答使他（她）超越他人的每个问题。</p>
+<p>常识使人们能够轻松度过自己的生活，因为他们倾向于通过充分利用可用资源来立即解决生活给他们带来的问题。</p>
+<p>它提供了对每种情况的意识和更好的理解。教育使人变得聪明，但这是使人变得聪明的常识。常识源于适应和分析。当一个人对情况本身使用自己的思想时，它以常识的形式提供了他/她的好主意。它使人们能够在最关键的情况下表达才华。</p>
+<p>人类已经被赋予了智力才能。才智真正有能力支配思想。它有助于释放精神界限。以及它可以帮助头脑体验完全的自由。当我们出生于这个世界时，我们不介意我们没有偏好。</p>
+<p>我们没有兴趣，我们没有喜欢或不喜欢。我们也没有任何感情或依恋。</p>
+<p>随着时间的流逝，思维开始发展。在适应和成长的基础上，它开始发展个性。</p>
+<p>政治自由是不够的，但是人们还必须在思想和生活方式上享有自由。他还敦促人们为实现自己的目标而努力，并实现导致经济自由的完美。人们不应厌倦工作或懒惰以忽略其职责。如果我们要取得值得克服思想狭narrow之处的东西，那么推理或逻辑思维是非常需要的素质。迷信的信仰和坏习惯不利于进步。这些降低了突破性发明或发现所必需的创造力和热情。有纪律的生活是一种了解自己对他人和社会的责任的生活。只有有纪律的人才能理解自由的真正价值和目的。他们为自己寻找挑战和责任。</p>
+<p>每个伟大的领导者都对自己的任务和使命采取了这种方法。他们为他们树立了远见，他们通过严格地运用纪律来实现自己的生活。人们需要将自己从偏见中解放出来，这些偏见就像沙漠一样，可以使任何清晰的思想枯竭。要实现非同寻常或不寻常的事情，就需要扩大思想的狭窄范围。</p>
+<p>更高的认识度使我们摆脱了以隐瞒动机指控他人的琐碎问题。一个心胸开阔的人将自己摆脱了将动机归因于他人行为的狭隘范围。让别人对我们的缺点和失败负责，意味着我们仍然处于别人控制之下的影响之下。</p>
+<p>真正的自由意味着能够理解没有人能够压倒我们，这取决于我们如何充分利用处境和生活。自由是一种精神状态，其中一个人无所畏惧地说出自己的想法并遵循他认为最迷人的生活道路。</p>
+<p>灵感是对自己的强烈信念。您必须研究自己并找到可以带来美好未来的品质。成为真实的你，那么只有你才能有勇气表达真实的感激。</p>
+<p>只有勇敢的人知道如何原谅某人，一旦最初的情感浪潮冲走了我们</p>
+<p>宽恕是为了我们自己的精神和平。这是我们所拥有的报仇感或任何不满情绪的释放，并给我们自己治愈的机会。并给自己留下摆脱愤怒和怨恨之痛的空间。</p>
+<p>勇敢是面对危险而不是逃避危险。这是关于克服我们最大的恐惧。并与之抗争，直到它不再让我们恐惧为止，您会获得一定程度的内心平静。逃离只是暂时的措施；应对我们的危险，停留和战斗的急救解决方案是永久解决方案的希望。它有助于治愈恐惧的伤口。</p>
+<p>英勇就是要走出自己的舒适区并克服恐惧。恐惧可能小到结识新朋友，与陌生人对话，在小型聚会上演讲或尝试冒险运动。待在舒适的地方永远不会带我们去任何地方，这只会使我们的生活停滞不前。没有进步。从开始担心的那一刻起，他就变得更有生产力了，因为他现在已经为新的和意料之外的变化做好了准备。这将进一步帮助他在将来突破自己的界限，并使他很容易利用自己的创造力和真正的自我。通过与他的恐惧作斗争，他变得勇敢，足够勇敢，足以承受他恐惧的结果。</p>
+<p>Courage Gives Power To Attract Positive Energies</p>
+<p>勇气赋予力量吸引正面能量</p>
+<p>我和你都拥有的美德，只能等待态度的改变而被唤醒，或者开始改变我们的行为方式并向世界展示自己。勇气给予力量并像渠道一样使我们与更广阔的视野联系起来，也就是说，通过这种实践，我们将能够开阔视野了解我们迄今为止所忽略的生活各个方面，但是在从长远来看，无论是在工作中获得更高的职位，在学校展示项目，还是邀请男生或男生，长期生活都将帮助我们改善应对生活挑战的方式。</p>
+<p>勇气只不过是通过成长并成为真正的自己来面对恐惧。通过做正确的事充满勇气与生活相遇</p>
+<p>勇气和舒适感是同一枚硬币的两个方面。勇于实现目标应该是您的目标，因为舒适不会让您接受错误并勇往直前！</p>
+<p>不管有什么生活给你。无论您走到哪里，只要有勇气，您都可以开始克服生活中看似困难的障碍。历史上许多伟大的思想家和领导人都过着这种美德。他们勇敢的思想和行动启发了人类。他们的想法可能在许多人中并不很受欢迎，但是他们仍然没有回避。他们追求做正确的事。他们可能已经失败多次，但仍在不断尝试。这种千方百计的态度是勇气。（例如医学家发现霍乱）</p>
+<p>勇敢的人按照自己的条件生存和生活，并教导周围的每个人都做同样的事情。一个人必须一直勇于拥有世界上最好的一面，并拥有自己最大的个人满足感。</p>
+<p>力量是坚强，而不是四肢，而在于灵魂的勇气。</p>
+<p>您是否捍卫自己的价值观，道德风尚并向与之背道而驰的人表现出勇气？承认他人也反映出您的道德态度。道德力量是任何人都能拥有的最大力量。如果您欣赏别人，而不是欣赏自己的体力，那就是您真正的英勇。向一个人提供道德支持可以建立你的真实品格。</p>
+<p>道德上的英勇可以帮助您克服恐惧，也不会让您害怕任何情况。有道德勇气的人总是有一个清晰的愿景，可以做任何事情，并对自己的人格充满信心。</p>
+<p>了解消极思想的根本原因将有助于您将其转变为建设性和积极思想，从而使您为自己和周围的每个人创造魔力。积极思考可以导致强烈的免疫力，积极的情绪，幸福并极大地减少焦虑。所有这些导致良好的睡眠和良好的健康。</p>
+<h2 id="学术"><a href="#学术" class="headerlink" title="学术"></a>学术</h2><h3 id="国家之间的心理距离"><a href="#国家之间的心理距离" class="headerlink" title="国家之间的心理距离"></a>国家之间的心理距离</h3><blockquote>
+<p>从心理学和社会学的见解的基础上,本文展示了国家因素和认知过程的相互作用形成的不对称距离感知。 结果表明,接触到其他国家通过移民和文化商品和服务的进口不对称对心理距离的感知的影响。 这些影响的大小的大小似乎随祖国——较小的国家往往平均感知心理距离小于一样世界其他地方更大的。 目标国家的名誉地位相对于国内的发现是一个非线性、不对称影响距离感知。</p>
+<p>据教授和辛格( 12 ),这些公司更容易了解市场的国家精神上接近,因为有一个隐含的假设,精神上接近国家更相似,相似比不同的公司更容易管理,从而使他们更有可能会成功( 10 ]。 由于心理距离会影响公司对不确定性的看法,因为这是基于人类感知和认知测量他们所知道的,或者认为他们知道。</p>
+<p>from 《The psychology of psychic distance: Antecedents of asymmetric perceptions》—-Journal of World Business</p>
+</blockquote>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/mywiki.github.io/39009/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>论文阅读及思考</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/mywiki.github.io/63534/">
+        <span>hmm理论和公式编写</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/mywiki.github.io/29283/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%84%BF%E7%AB%A5%E6%95%99%E8%82%B2%E5%BE%88%E9%87%8D%E8%A6%81%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">为什么儿童教育很重要？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%91%E9%92%B1%E8%83%BD%E8%A7%A3%E5%86%B3%E5%A4%9A%E5%B0%91%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">金钱能解决多少问题？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%9C%E5%8D%97%E4%BA%9A%E6%96%87%E5%8C%96%E5%9C%88"><span class="toc-number">3.</span> <span class="toc-text">东南亚文化圈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E5%92%8C%E6%99%BA%E6%85%A7"><span class="toc-number">4.</span> <span class="toc-text">知识和智慧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%99%E8%82%B2%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="toc-number">5.</span> <span class="toc-text">教育的目标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%9C%AF"><span class="toc-number"></span> <span class="toc-text">学术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%AE%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%BF%83%E7%90%86%E8%B7%9D%E7%A6%BB"><span class="toc-number">1.</span> <span class="toc-text">国家之间的心理距离</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2021 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        vm
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/mywiki.github.io/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/mywiki.github.io/js/meadow.js"></script>
+
+</body>
+</html >
