@@ -1792,4 +1792,63 @@ AttributeError<span class="token punctuation">:</span> module <span class="token
         <tag>HMM</tag>
       </tags>
   </entry>
+  <entry>
+    <title>NILM技术框架梳理</title>
+    <url>/mywiki.github.io/5636/</url>
+    <content><![CDATA[<h2 id="V1"><a href="#V1" class="headerlink" title="V1"></a>V1</h2><p><img src="https://i.loli.net/2021/07/08/C5nVo8k7TLFBrjP.png" alt="image-20210708181803759"></p>
+<h2 id="碎片想法测试"><a href="#碎片想法测试" class="headerlink" title="碎片想法测试"></a>碎片想法测试</h2><h2 id="增加一个开源code存放地"><a href="#增加一个开源code存放地" class="headerlink" title="增加一个开源code存放地"></a>增加一个开源code存放地</h2><p><a href="https://codechina.csdn.net/explore">https://codechina.csdn.net/explore</a></p>
+<h2 id="找到一个国外开源code样例的网站"><a href="#找到一个国外开源code样例的网站" class="headerlink" title="找到一个国外开源code样例的网站"></a>找到一个国外开源code样例的网站</h2><p><a href="https://python.hotexamples.com/">https://python.hotexamples.com/</a></p>
+<h2 id="find-another-method-to-get-what-code-sample-you-need"><a href="#find-another-method-to-get-what-code-sample-you-need" class="headerlink" title="find another method to get what code sample you need"></a>find another method to get what code sample you need</h2><p>“Ridge Regression” site:<a href="https://towardsdatascience.com/">https://towardsdatascience.com</a>  in google research</p>
+<h2 id="对NILM算法的修改"><a href="#对NILM算法的修改" class="headerlink" title="对NILM算法的修改"></a>对NILM算法的修改</h2><h3 id="感觉HMM算法可以模拟生成样本，基于给定的均值和方差，因此可以采取减法提取新的单一设备样本数据"><a href="#感觉HMM算法可以模拟生成样本，基于给定的均值和方差，因此可以采取减法提取新的单一设备样本数据" class="headerlink" title="感觉HMM算法可以模拟生成样本，基于给定的均值和方差，因此可以采取减法提取新的单一设备样本数据"></a>感觉HMM算法可以模拟生成样本，基于给定的均值和方差，因此可以采取减法提取新的单一设备样本数据</h3><p>然后采取DWT动态相似度进行匹配<br>采用岭回归求解参数</p>
+<p>############################</p>
+<h3 id="CO组合优化算法的核心code"><a href="#CO组合优化算法的核心code" class="headerlink" title="CO组合优化算法的核心code"></a>CO组合优化算法的核心code</h3><p>############################<br>summed_power_of_each_combination = np.sum(state_combinations, axis=1) #计算不同状态对应功率的叠加值</p>
+<h3 id="Start-disaggregation-将组合状态对应的叠加功率值与总表功率值进行匹配"><a href="#Start-disaggregation-将组合状态对应的叠加功率值与总表功率值进行匹配" class="headerlink" title="Start disaggregation 将组合状态对应的叠加功率值与总表功率值进行匹配"></a>Start disaggregation 将组合状态对应的叠加功率值与总表功率值进行匹配</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">indices_of_state_combinations<span class="token punctuation">,</span> residual_power <span class="token operator">=</span> find_nearest<span class="token punctuation">(</span>
+            summed_power_of_each_combination<span class="token punctuation">,</span> mains<span class="token punctuation">.</span>values<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+
+<p>​            </p>
+<p>#########################</p>
+<h1 id="计算拟合残差"><a href="#计算拟合残差" class="headerlink" title="计算拟合残差"></a>计算拟合残差</h1><p>#######################</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">compute_rmse</span><span class="token punctuation">(</span>gt<span class="token punctuation">,</span> pred<span class="token punctuation">)</span><span class="token punctuation">:</span>   <span class="token comment">### 评估指标 rmse</span>
+    <span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> mean_squared_error
+    rms_error <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+    <span class="token keyword">for</span> appliance <span class="token keyword">in</span> gt<span class="token punctuation">.</span>columns<span class="token punctuation">:</span>
+        rms_error<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>mean_squared_error<span class="token punctuation">(</span>gt<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">,</span> pred<span class="token punctuation">[</span>appliance<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">## 评价指标的定义很简单，就是均方根误差</span>
+    <span class="token keyword">return</span> pd<span class="token punctuation">.</span>Series<span class="token punctuation">(</span>rms_error<span class="token punctuation">)</span>
+rmse <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h1 id="查看某一函数运行时间的code"><a href="#查看某一函数运行时间的code" class="headerlink" title="查看某一函数运行时间的code"></a>查看某一函数运行时间的code</h1><p>###############################</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">known_array <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+test_array <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Speedups:'</span><span class="token punctuation">)</span>
+base_time <span class="token operator">=</span> time_f<span class="token punctuation">(</span><span class="token string">'base'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> func_name <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">'diffs'</span><span class="token punctuation">,</span> <span class="token string">'searchsorted1'</span><span class="token punctuation">,</span> <span class="token string">'searchsorted2'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> func_name <span class="token operator">+</span> <span class="token string">' is x%.1f faster than base.'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>base_time <span class="token operator">/</span> time_f<span class="token punctuation">(</span>func_name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">assert</span> np<span class="token punctuation">.</span>allclose<span class="token punctuation">(</span>base<span class="token punctuation">(</span>known_array<span class="token punctuation">,</span> test_array<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">eval</span><span class="token punctuation">(</span>func_name<span class="token operator">+</span><span class="token string">'(known_array, test_array)'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>​<br>########################################</p>
+<p>dwt code:</p>
+<pre><code>     import fastdtw
+distance, dtw_path = fastdtw.fastdtw(src_features, tgt_features)
+
+import fastdtw
+def nearest(self, rsp):
+    test_seq = rsp
+    all_dists = [[fastdtw.fastdtw(test_seq, r, dist=euclidean)[0] for r in random.sample(class_seqs, self.K)] for class_seqs in self.tr_seqs]
+    min_dists = [min(dists) for dists in all_dists]
+    return np.argmin(min_dists)
+</code></pre>
+<p>​<br>​     def run(self):<br>​         result = np.empty((0, self.len_data), float)<br>​         for i in self.my_range:<br>​             x = pd.concat([pd.DataFrame(range(1,len(self.data)+1)),self.data.ix[:,i]], axis =1)<br>​             x = np.array(x)<br>​         temp = np.empty(shape = [1, self.len_data])<br>​         for j in range(self.len_data):<br>​             y = pd.concat([pd.DataFrame(range(1,len(self.data)+1)),self.data.ix[:,i]], axis =1)<br>​             y = np.array(y)<br>​             distance = fastdtw(x, y, dist= cosine)<br>​             temp[0,j] = distance<br>​         result = np.append(result, np.array(temp), axis=0)<br>​     score = pd.DataFrame(data = result)<br>​     score.to_csv(out_path +str(self.index).zfill(3) + “thread.txt”, header = None, index = False)</p>
+]]></content>
+      <tags>
+        <tag>office</tag>
+      </tags>
+  </entry>
 </search>
